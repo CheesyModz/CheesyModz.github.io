@@ -4,6 +4,33 @@ img {
     margin-right: 10px;
 }
 
+video{
+    height: 450px;
+    width: 450px;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+}
+  
+li {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 25px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
 p.waifu {
     font-weight: bold;
     font-size: 30px;
