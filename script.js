@@ -1,4 +1,4 @@
-var img_array = ["images/ganyu.jpg", "images/miku.png"];
+var img_array = ["images/ganyu.jpg", "images/miku.png", "images/ganyu1.jpg", "images/ayaka.jpg"];
 i = 0;
 
 function myFunction() {
