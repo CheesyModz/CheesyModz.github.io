@@ -1,17 +1,19 @@
+.button-text-center{
+	text-align: center;	
+}
+
+button {
+    background-color: cadetblue;
+}
+
 img {
     width: 450px;
     height: 600px;
-    margin-right: 10px;
 }
 
-video{
+video.waifu{
     height: 450px;
     width: 450px;
-}
-
-button{
-    height: 50px;
-    width: 100px;
 }
 
 ul {
@@ -41,6 +43,7 @@ p.video {
     font-size: 30px;
     text-align: center;
 }
+
 .DivWaifu {
     background-color:cadetblue;
 }
