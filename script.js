@@ -25,3 +25,11 @@ var possibleResponses = [
 function response() {
     document.getElementById("test").innerHTML = possibleResponses[(Math.floor(Math.random() * 5))];
 }
+
+function openNav() {
+    document.getElementById("mySidenav").style.width= "250px";
+}
+
+function closeNav () {
+    document.getElementById("mySidenav").style.width = "0";
+}
