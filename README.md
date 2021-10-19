@@ -1,1 +1,4 @@
-Website that is hosted by github
+Website hosted by Github
+
+# Want to view my website?
+CheesyModz.github.io
