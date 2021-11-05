@@ -21,7 +21,11 @@
 
     <font color="white">
 
-    <h1> 8ball </h1>
+    <h1> Games </h1>
+
+    <p> Under construction </p>
+
+    <h2> 8ball </h2>
 
     <div style="text-align: center;">
         <p>Click on 8ball when you are ready</p>
@@ -33,10 +37,18 @@
         <button onclick="response()">
             <img src="images/8ball.png">
         </button>
-        <p id="test"></p>
+        <p id="output"></p>
     </div>
-
     </font>
+</body>
+
+<body onload="startGame()"></body>
+    <div style="text-align:center;width:480px;">
+        <button onclick="moveup()">UP</button><br><br>
+        <button onclick="moveleft()">LEFT</button>
+        <button onclick="moveright()">RIGHT</button><br><br>
+        <button onclick="movedown()">DOWN</button>
+    </div>
 
 </body>
 
