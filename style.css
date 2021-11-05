@@ -74,3 +74,8 @@ p.video {
     font-size: 40px;
     margin-left: 200px;
 }
+
+canvas {
+    border:1px solid white;
+    background-color: gray;
+}
