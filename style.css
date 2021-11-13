@@ -119,3 +119,7 @@ canvas {
     border-bottom: 2px solid lightcoral;
 }
 
+#grad {
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgba(0, 255, 255, 1), rgb(183, 0, 255));
+}
