@@ -108,7 +108,7 @@ canvas {
 }
 
 .content-table tbody tr:nth-of-type(odd) {
-    background-color: rgb(240, 128, 128);
+    background-color: lightcoral;
 }
 
 .content-table tbody tr:nth-of-type(even) {
