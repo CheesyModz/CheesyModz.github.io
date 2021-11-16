@@ -40,7 +40,7 @@ p.video {
     text-align: center;
 }
 
-.DivWaifu {
+.waifu {
     background-color:cadetblue;
 }
 
@@ -119,7 +119,31 @@ canvas {
     border-bottom: 2px solid lightcoral;
 }
 
+.space {
+    margin-top: 300px;
+}
+
+.space2 {
+    margin-top: 1350px;
+}
+
 #grad {
     height: 100%;
     background-image: linear-gradient(to bottom right, rgba(0, 255, 255, 1), rgb(183, 0, 255));
 }
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: box 5s infinite;
+}
+
+@keyframes box {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
