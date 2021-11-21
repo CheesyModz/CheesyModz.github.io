@@ -14,6 +14,11 @@ function myFunction() {
     }
 }
 
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+}
+
 var possibleResponses = [
                         "That is a no",
                         "It is not looking likely",
