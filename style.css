@@ -143,3 +143,21 @@ canvas {
     75%  {background-color:green; left:0px; top:200px;}
     100% {background-color:red; left:0px; top:0px;}
   }
+
+.container { 
+    height: 200px;
+    position: relative;
+    border: 3px solid green; 
+}
+ 
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.center2 {
+    position: relative;
+    top: 35%;
+    left: 35%;
+}
