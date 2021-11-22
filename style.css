@@ -145,7 +145,8 @@ canvas {
   }
 
 .container { 
-    height: 200px;
+    background-image: url("images/hololive.jfif");
+    height: 1400px;
     position: relative;
     border: 3px solid green; 
 }
@@ -154,10 +155,4 @@ canvas {
     position: absolute;
     top: 50%;
     left: 50%;
-}
-
-.center2 {
-    position: relative;
-    top: 35%;
-    left: 35%;
 }
