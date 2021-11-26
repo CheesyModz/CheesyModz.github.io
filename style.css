@@ -195,7 +195,7 @@ canvas {
 }
 
 .parallax {
-    background-image: url("images/ganyu1.jpg");
+    background-image: url("images/kei.jfif");
 
     height: 100%;
 
@@ -210,6 +210,3 @@ canvas {
         background-attachment: scroll;
     }
 }
-
-
-
