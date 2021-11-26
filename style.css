@@ -40,10 +40,6 @@ p.video {
     text-align: center;
 }
 
-.divwaifu {
-    background-color:cadetblue;
-}
-
 .sidenav {
     height: 100%;
     width: 0px;
@@ -197,3 +193,23 @@ canvas {
    60% { transform: rotate( 0.0deg) }  
   100% { transform: rotate( 0.0deg) }
 }
+
+.parallax {
+    background-image: url("images/ganyu1.jpg");
+
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px){
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+
+
