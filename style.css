@@ -2,6 +2,19 @@ button {
     background-color: cadetblue;
 }
 
+.btn {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    color: darkcyan;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btn:hover{
+    color: #4cc9f0;
+}
+
 img.waifu {
     width: 450px;
     height: 600px;
