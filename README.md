@@ -3,7 +3,7 @@ Website hosted by Github
 # Want to view my website?
 https://cheesymodz.github.io/ <- link to my website
 
-For fun website that contains videos, images, gifs, animations, emojis, discord bot commands, and games
+For fun website that contains videos, images, gifs, animations, emojis, discord bot commands, games, characters rating, and courses ratings
 
 More to come in the future
 
