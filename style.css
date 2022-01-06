@@ -149,13 +149,12 @@ canvas {
 
 .rating-table {
     border: 2px solid black;
-    text-align: center;
     margin: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
 }
 
 .rating-table tr td+td {
-    width: 700px;
+    width: 800px;
 }
 
 .rating-table tbody td {
@@ -172,41 +171,49 @@ Background colours for the tier list column 1
 #Splus{
     background-color: lightcoral;
     border-right: 2px solid black;
+    text-align: center;
 }
 
 #S{
     background-color: orange;
     border-right: 2px solid black;
+    text-align: center;
 }
 
 #A{
     background-color: yellow;
     border-right: 2px solid black;
+    text-align: center;
 }
 
 #B{
     background-color: yellowgreen;
     border-right: 2px solid black;
+    text-align: center;
 }
 
 #C{
     background-color: rgb(54, 124, 54);
     border-right: 2px solid black;
+    text-align: center;
 }
 
 #D{
     background-color: lightblue;
     border-right: 2px solid black;
+    text-align: center;
 }
 
 #E{
     background-color: rgb(111, 86, 253);
     border-right: 2px solid black;
+    text-align: center;
 }
 
 #F{
     background-color: rgb(213, 117, 228);
     border-right: 2px solid black;
+    text-align: center;
 }
 
 
@@ -304,4 +311,43 @@ Background colours for the tier list column 1
     .parallax {
         background-attachment: scroll;
     }
+}
+
+.containerr{
+    perspective: 1000px;
+}
+
+.card{
+    width: 300px;
+    background-color: #4cc9f0;
+    height: 300px;
+    opacity: 0.9;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 900px;
+}
+
+.contain{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    float: left;
+}
+
+.overlay {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.contain:hover .overlay {
+    opacity: 1;
 }
