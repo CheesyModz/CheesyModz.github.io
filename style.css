@@ -84,6 +84,11 @@ p.video {
     margin-left: 200px;
 }
 
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 20px;}
+}
+
 canvas {
     border:1px solid white;
     background-color: gray;
@@ -313,17 +318,40 @@ Background colours for the tier list column 1
     }
 }
 
-.containerr{
+.cards{
     perspective: 1000px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
 }
 
 .card{
-    width: 300px;
+    width: 640px;
     background-color: #4cc9f0;
-    height: 300px;
-    opacity: 0.9;
+    height: 320px;
+    opacity: 0.7;
     border-radius: 20px;
     align-items: center;
+}
+
+.SpacingHorizontal{
+    padding: 30px;
+}
+
+p.cardTitle{
+    color: black;
+    text-align: center;
+    font-size: larger;
+    padding-top: 5mm;
+}
+
+img.card{
+    padding-left: 15px;
+    padding-top: 10px;
+    width: auto;
+    height: 200px;
+    opacity: 0.85;
 }
 
 .wrapper{
@@ -351,3 +379,11 @@ Background colours for the tier list column 1
 .contain:hover .overlay {
     opacity: 1;
 }
+
+/* .header{
+    padding: 40px;
+    opacity: 0.9;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+} */
