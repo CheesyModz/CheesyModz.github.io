@@ -42,6 +42,10 @@ h1{
     text-align: center;
 }
 
+h2{
+    text-align: center;
+}
+
 p.waifu {
     font-weight: bold;
     font-size: 30px;
@@ -101,13 +105,14 @@ canvas {
     margin-left:auto;
     margin-right: auto;
     min-width: 400px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 15px 15px 20px 20px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
 }
 
 .content-table thead tr {
     background-color: lightgreen;
+    color: crimson;
     text-align: left;
     font-weight: bold;
 }
@@ -303,9 +308,7 @@ Background colours for the tier list column 1
 
 .parallax {
     background-image: url("images/kei.jfif");
-
     height: 100%;
-
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -381,9 +384,29 @@ img.card{
 }
 
 /* .header{
+    height: 150px;
+    width: 1000px;
     padding: 40px;
     opacity: 0.9;
     text-align: center;
     background: #1abc9c;
     color: white;
 } */
+
+#toc_container{
+    border: 1px solid black;
+    display: table;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+    width: auto;
+
+}
+
+.toc_title{
+    font-weight: 700;;
+    text-align: center;
+    font-size: xx-large;
+}
+
