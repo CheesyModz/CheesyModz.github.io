@@ -2,7 +2,8 @@ var imgArray = [
                 "images/ganyu.jpg", 
                 "images/miku.png", 
                 "images/ganyu1.jpg", 
-                "images/ayaka.jpg"
+                "images/ayaka.jpg",
+                "images/Kei Karuizawa.jpg"
                 ];
 i = 0;
 
@@ -13,6 +14,7 @@ function myFunction() {
         i = -1;
     }
 }
+
 
 function play() {
     var audio = document.getElementById("audio");
