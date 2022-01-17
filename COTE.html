@@ -6,30 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="icons/gura.ico"/>
 </head>
 
 <body style="background-color:grey;">
     <script src="js/script.js"></script>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html" target=_self>Home</a>
         <a href="Anime.html" target=_self>Anime</a>
-        <a href="Games.html" target=_self>Games</a>
-        <a href="Commands.html" target=_self>Bot Commands</a>
-        <a href="Courses.html" target=_self>Courses Rating</a>
         <a href="COTE.html" target=_self>COTE</a>
+        <a href="Commands.html" target=_self>Bot Commands</a>
         <a href="Connections.html" target=_self>Connections</a>
+        <a href="Courses.html" target=_self>Courses Rating</a>
+        <a href="Games.html" target=_self>Games</a>
+        <a href="index.html" target=_self>Home</a>
     </div>
 
     <span style="color: white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; sidebar</span>
 
     <font color="white">
 
-    <h1> Classroom of the elite Characters tier-list</h1>
+    <h1> Classroom of the Elite (COTE)</h1>
+
+    <div id="toc_container">
+        <p class="toc_title">Contents</p>
+        <ul style="text-align: center;">
+            <li><a href="#tierList">1. Tier-List</a></li><br>
+            <li><a href="#males">1.1. Males</a></li><br>
+            <li><a href="#female">1.2. Females</a></li><br>
+            <li><a href="#illustrations">2. Illustrations</a></li><br>
+        </ul>
+    </div>
+
+    <h1 id="tierList"> Classroom of the Elite Characters Tier-list</h1>
     
     <p style="text-align: center; font-size: medium; color: black;"><i>Last Read Light Novel: Year 2 Volume 4.5<BR>By: Gary Huang</i></p>
 
-    <h2 style="text-align: center;">Males</h2>
+    <h2 id="males">Males</h2>
 
     <table class="rating-table">
 
@@ -190,7 +203,7 @@
 
     </table>
 
-    <h2 style="text-align: center;">Females</h2>
+    <h2 id="females">Females</h2>
 
     <table class="rating-table">
 
@@ -238,10 +251,6 @@
                             <div class="overlay">Chiaki Matsushita</div>
                         </div>
                         <div class="contain">
-                            <img src="icons/Females/Honami Ichinose.png" width=100px height=100px>
-                            <div class="overlay">Honami Ichinose</div>
-                        </div>
-                        <div class="contain">
                             <img src="icons/Females/Haruka Hasebe.png" width=100px height=100px>
                             <div class="overlay">Haruka Hasebe</div>
                         </div>
@@ -259,6 +268,10 @@
                         <div class="contain">
                             <img src="icons/Females/Ichika Amasawa.png" width=100px height=100px>
                             <div class="overlay">Ichika Amasawa</div>
+                        </div>
+                        <div class="contain">
+                            <img src="icons/Females/Honami Ichinose.png" width=100px height=100px>
+                            <div class="overlay">Honami Ichinose</div>
                         </div>
                         <div class="contain">
                             <img src="icons/Females/Sae Chabashira.png" width=100px height=100px>
@@ -350,6 +363,17 @@
         </tbody>
 
     </table>
+
+    <h1 id="illustrations">Favourite Light Novel Illustrations</h1>
+
+    <h2>By: <i>Tomoseshunsaku</i></h2>
+
+    <br>
+
+    <!-- https://www.geeksforgeeks.org/how-to-preview-image-on-click-in-gallery-view-using-html-css-and-javascript/ -->
+    <div style="text-align: center;">
+        <button class="button btn">Show Illustrations</button>
+    </div>
 
     </font>
 </body>
