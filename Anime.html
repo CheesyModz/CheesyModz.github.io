@@ -6,130 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="icons/gura.ico"/>
 </head>
 
 <body style="height: 100%; background-color:black;">
     <script src="js/script.js"></script>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html" target=_self>Home</a>
         <a href="Anime.html" target=_self>Anime</a>
-        <a href="Games.html" target=_self>Games</a>
-        <a href="Commands.html" target=_self>Bot Commands</a>
-        <a href="Courses.html" target=_self>Courses Rating</a>
         <a href="COTE.html" target=_self>COTE</a>
+        <a href="Commands.html" target=_self>Bot Commands</a>
         <a href="Connections.html" target=_self>Connections</a>
+        <a href="Courses.html" target=_self>Courses Rating</a>
+        <a href="Games.html" target=_self>Games</a>
+        <a href="index.html" target=_self>Home</a>
     </div>
+    
     <div class="parallax">
-    <span style="color: black;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; sidebar</span>
+    <span style="color: white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; sidebar</span>
+    
+    <font color="white">
 
-    <font color="black">
+    <h1> Anime Collection</h1>
+    <p style="text-align: center; font-size: large;">Feel free to view <a href="https://myanimelist.net/profile/CheesyModz" target=_blank>MyAnimeList</a></p>
 
-            <h1> Anime Collection</h1>
-            <p style="text-align: center; font-size: large;">Feel free to view <a href="https://myanimelist.net/profile/CheesyModz" target=_blank>MyAnimeList</a></p>
-            <div>
-                <p class="waifu"> ma waifus </p>
-        
-                </font>
+    <div id="toc_container">
+        <p class="toc_title">Contents</p>
+        <ul style="text-align: center;">
+            <li><a href="#image">1. Images</a></li><br>
+            <li><a href="#video">2. Videos</a></li><br>
+        </ul>
+    </div>
 
-                <div style="text-align: center;">
-                    <p style="color:black">Click on image to change picture</p>
-                    <button onclick="myFunction()">
-                        <img class="waifu" id="myImg" src="images/ganyu.jpg">
-                    </button>
-                </div>
-        
-            </div>
-        
+    <div class="parallax">
+        <p id="image" class="waifu" style="color: lightgreen;"> ma waifus </p>
+
+        <div style="text-align: center;">
+            <p>Click on image to change picture</p>
+            <button onclick="myFunction()">
+                <img class="waifu" id="myImg" src="images/ganyu.jpg">
+            </button>
         </div>
 
-        <div class="parallax">
-            <div>
-                
-                <br><br><br><br><br><br><br><br>
-
-                <p style="color:black"class="video"> videos </p>
-
-                <p align="center">
-                    <video class="waifu" controls loop>
-                        <source src="videos/bruh.mp4" type=video/mp4>
-                    </video>
-            
-                    <video class="waifu" controls loop>
-                        <source src="videos/yo.mp4" type=video/mp4>
-                    </video>
-            
-                    <video class="waifu" controls loop>
-                        <source src="videos/die.mp4" type=video/mp4>
-                    </video>
-                </p>
+        <p id="video" style="color:lightgreen"class="video"> videos </p>
         
-                <p align="center">
-                    <video class="waifu" controls loop>
-                        <source src="videos/a.mp4" type=video/mp4>
-                    </video>
+        <p align="center">
+            <video class="waifu" controls loop>
+                <source src="videos/bruh.mp4" type=video/mp4>
+            </video>
+    
+            <video class="waifu" controls loop>
+                <source src="videos/yo.mp4" type=video/mp4>
+            </video>
+    
+            <video class="waifu" controls loop>
+                <source src="videos/die.mp4" type=video/mp4>
+            </video>
+        </p>
+
+        <p align="center">
+            <video class="waifu" controls loop>
+                <source src="videos/a.mp4" type=video/mp4>
+            </video>
+    
+            <video class="waifu" controls loop>
+                <source src="videos/bridge.mp4" type=video/mp4>
+            </video>
             
-                    <video class="waifu" controls loop>
-                        <source src="videos/bridge.mp4" type=video/mp4>
-                    </video>
-                    
-                    <video class="waifu" controls loop>
-                        <source src="videos/yoDayo.mp4" type=video/mp4>
-                    </video>
-                </p>
+            <video class="waifu" controls loop>
+                <source src="videos/yoDayo.mp4" type=video/mp4>
+            </video>
+        </p>
 
-                <p align="center">
-                    <video class="waifu" controls loop>
-                        <source src="videos/ah.mp4" type=video/mp4>
-                    </video>
+        <p align="center">
+            <video class="waifu" controls loop>
+                <source src="videos/ah.mp4" type=video/mp4>
+            </video>
 
-                    <video class="waifu" controls loop>
-                        <source src="videos/pog.mp4" type=video/mp4>
-                    </video>
+            <video class="waifu" controls loop>
+                <source src="videos/pog.mp4" type=video/mp4>
+            </video>
 
-                    <video class="waifu" controls loop>
-                        <source src="videos/banana.mp4" type=video/mp4>
-                    </video>
+            <video class="waifu" controls loop>
+                <source src="videos/banana.mp4" type=video/mp4>
+            </video>
+        </p>
 
-                </p>
-            </div>
-        </div>
-        <br><br><br><br><br><br><br>
-        <div class="parallax"></div>
+        <p align="center">
+            <video class="waifu" controls loop>
+                <source src="videos/HO HO HO.mp4" type=video/mp4>
+            </video>
 
+            <video class="waifu" controls loop>
+                <source src="videos/𝓊𝒽 𝑜𝒽....mp4" type=video/mp4>
+            </video>
+
+            <video class="waifu" controls loop>
+                <source src="videos/rosemi.mp4" type=video/mp4>
+            </video>
+        </p>
+
+    </div>
+
+    <div class="parallax"></div>
+    <div class="parallax"></div>
+
+    <div class="parallax">
         <div class="container">
             <div class="center">
                 <input type="button" value="Click Me!" onclick="play()">
                 <audio id="audio" src="audio/peko.mp3">
             </div>
         </div>
-        
+
+        <p align="center">
+            <img src="gifs/duck.gif" width=450px height=450px>
+            <img src="gifs/hololive.gif" width=450px height=450px>
+        </p>
+    </div>
+
+    <div class="parallax"></div>
+
+    <div style="height:1000px;background-color:darkviolet;font-size:36px">
+    Cool
+    </div>
+    
+    <div class="parallax">  
+
         <br>
 
-        <div class="parallax">
-
-            <p align="center">
-                <img src="gifs/duck.gif" width=450px height=450px>
-                <img src="gifs/hololive.gif" width=450px height=450px>
-            </p>
-        </div>
-
-        <div class="parallax"></div>
-
-        <div style="height:1000px;background-color:darkviolet;font-size:36px">
-        Cool
-        </div>
-        
-        <div class="parallax">  
-
-                <button class="button btn">Hover Me</button>
-
+        <div style="text-align: center;">
+            <button class="button btn">Hover Me</button>
         </div>
 
         <!-- https://www.w3schools.com/charsets/ref_emoji.asp -->
         <p style="font-size:48px; text-align: center;">
             &#128525; &#128526; &#128527;
         </p>
+
+        <h1>For Classroom of the Elite visit COTE page on the sidebar</h1>
+
+    </div>
+
+    </font>
+
 </body>
 
 </html>
