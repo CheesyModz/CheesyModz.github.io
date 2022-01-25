@@ -100,3 +100,9 @@ function moveleft() {
 function moveright() {
     box.speedX += 1; 
 }
+
+function changeName(){
+    var name = document.getElementById("name").value;
+    if (name == "") document.getElementById("demo").innerHTML = "Try again!";
+    else document.getElementById("demo").innerHTML = `Hello ${name}. Welcome to my Website!`;
+}
