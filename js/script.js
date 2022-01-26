@@ -106,3 +106,39 @@ function changeName(){
     if (name == "") document.getElementById("demo").innerHTML = "Try again!";
     else document.getElementById("demo").innerHTML = `Hello ${name}. Welcome to my Website!`;
 }
+
+var top10 = [
+    "10. Tokoyo Revengers",
+    "9. Sk∞",
+    "8. Horimiya",
+    "7. Demon Slayer Mugen Train",
+    "6. Vivy",
+    "5. 86 EIGHTY SIX",
+    "4. Jujutsu Kaisen",
+    "3. Odd Taxi",
+    "2. AOT (Attack on Titans)",
+    "1. Mushoku Tensei"
+];
+
+var top10Images = [
+    "tokoyo revengers.jpg",
+    "sk∞.jpg",
+    "horimiya.jpg",
+    "demon slayer.jpg",
+    "vivy.jpg",
+    "86.jpg",
+    "jujutsu kaisen.jpg",
+    "odd taxi.jpg",
+    "aot.jpg",
+    "mushoku tensei.jpg"
+];
+
+index = 0;
+
+function change_text(direction){
+    if (direction == 'Back' && index != 0) index--;
+    else if (direction == 'Next') index++;
+    document.getElementById("2021Text").innerHTML = top10[index];
+    document.getElementById("2021Image").setAttribute('src', `images/${top10Images[index]}`);
+    if (index == 9) index = -1;
+}
