@@ -410,3 +410,28 @@ img.card{
     font-size: xx-large;
 }
 
+.btnLeft {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ff6d74;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btnLeft:hover{
+    color: #ff003f;
+}
+
+.btnRight {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #d997ff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btnRight:hover{
+    color: #8f00f1;
+}
