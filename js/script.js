@@ -107,7 +107,7 @@ function changeName(){
     else document.getElementById("demo").innerHTML = `Hello ${name}. Welcome to my Website!`;
 }
 
-var top10 = [
+var top10_2021 = [
     "10. Tokoyo Revengers",
     "9. Sk∞",
     "8. Horimiya",
@@ -120,7 +120,7 @@ var top10 = [
     "1. Mushoku Tensei"
 ];
 
-var top10Images = [
+var top10_2021Images = [
     "tokoyo revengers.jpg",
     "sk∞.jpg",
     "horimiya.jpg",
@@ -138,7 +138,16 @@ index = 0;
 function change_text(direction){
     if (direction == 'Back' && index != 0) index--;
     else if (direction == 'Next') index++;
-    document.getElementById("2021Text").innerHTML = top10[index];
-    document.getElementById("2021Image").setAttribute('src', `images/${top10Images[index]}`);
+    document.getElementById("2021Text").innerHTML = top10_2021[index];
+    document.getElementById("2021Image").setAttribute('src', `images/${top10_2021Images[index]}`);
     if (index == 9) index = -1;
+}
+
+function showHideBlock(year){
+    var contents = document.getElementById(`contents${year}`);
+    if (contents.style.display == "none"){
+        contents.style.display = "block";
+    }else{
+        contents.style.display = "none";
+    }
 }
