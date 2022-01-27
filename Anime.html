@@ -36,7 +36,8 @@
                 <li><a href="#image">1. Images</a></li><br>
                 <li><a href="#video">2. Videos</a></li><br>
                 <li><a href="#award">3. Anime Awards Vote</a></li><br>
-                <li><a href="#2021">4. Top anime of 2021</a></li><br>
+                <li><a href="#2021">4. Top 10 Anime of 2021</a></li><br>
+                <li><a href="#2020">5. Top 10 Anime of 2022</a></li><br>
             </ul>
         </div>
 
@@ -190,14 +191,17 @@
     <div class="parallax"></div>
     <div class="parallax">
         <br>
-        <h1 id="2021" style="color: lightgreen;"> My top 10 Anime of the Year 2021 (That I watched)</h1>
-        <p style="text-align: center;">Click on button to view next anime</p>
-        <h2 id="2021Text">10. Tokoyo Revengers</h2>
-        <div style="text-align: center;">
-            <img id="2021Image" src="images/tokoyo revengers.jpg" width=400 height=518>
-            <p>Images taken from <a href="https://myanimelist.net/" target=_blank>MAL</a></p>
-            <button class="button btnLeft" onclick="change_text('Back')">Back</button>
-            <button class="button btnRight" onclick="change_text('Next')">Next</button>
+        <p style="text-align: center;">Press to title to show/hide.</p>
+        <button onclick="showHideBlock('2021')" id="2021" class="button buttonShow"> My Top 10 Anime of the Year 2021 (That I watched)</button>
+        <div id="contents2021">
+            <p style="text-align: center;">2021 was a stacked year of anime. Click on button to view next anime</p>
+            <h2 id="2021Text">10. Tokoyo Revengers</h2>
+            <div style="text-align: center;">
+                <img id="2021Image" src="images/tokoyo revengers.jpg" width=400 height=518>
+                <p>Images taken from <a href="https://myanimelist.net/" target=_blank>MAL</a></p>
+                <button class="button btnLeft" onclick="change_text('Back')">Back</button>
+                <button class="button btnRight" onclick="change_text('Next')">Next</button>
+            </div>
         </div>
     </div>
 
