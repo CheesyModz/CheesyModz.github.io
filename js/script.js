@@ -139,7 +139,7 @@ function change_text(direction){
     if (direction == 'Back' && index != 0) index--;
     else if (direction == 'Next') index++;
     document.getElementById("2021Text").innerHTML = top10_2021[index];
-    document.getElementById("2021Image").setAttribute('src', `images/${top10_2021Images[index]}`);
+    document.getElementById("2021Image").setAttribute('src', `images/2021/${top10_2021Images[index]}`);
     if (index == 9) index = -1;
 }
 
