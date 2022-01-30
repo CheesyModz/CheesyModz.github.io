@@ -174,11 +174,17 @@ function change_text(direction, year){
     if (index == 9) index = -1;
 }
 
-function showHideBlock(year){
-    var contents = document.getElementById(`contents${year}`);
-    if (contents.style.display == "none"){
-        contents.style.display = "block";
-    }else{
-        contents.style.display = "none";
-    }
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
 }
