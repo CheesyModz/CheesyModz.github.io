@@ -1,5 +1,6 @@
 button {
     background-color: cadetblue;
+    cursor: pointer;
 }
 
 .btn {
@@ -9,6 +10,7 @@ button {
     color: darkcyan;
     font-size: 30px;
     text-align: center;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -417,6 +419,7 @@ img.card{
     color: #ff6d74;
     font-size: 30px;
     text-align: center;
+    cursor: pointer;
 }
 
 .btnLeft:hover{
@@ -430,13 +433,14 @@ img.card{
     color: #d997ff;
     font-size: 30px;
     text-align: center;
+    cursor: pointer;
 }
 
 .btnRight:hover{
     color: #8f00f1;
 }
 
-.buttonShow{
+.collapsible{
     background-color: transparent;
     border: 3px solid;
     border-radius: 10px;
@@ -445,4 +449,30 @@ img.card{
     color: lightgreen; 
     width: 100%;
     height: 100px;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: transparent;
 }
