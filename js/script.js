@@ -133,13 +133,44 @@ var top10_2021Images = [
     "mushoku tensei.jpg"
 ];
 
+var top10_2020 = [
+    "10. Fire Force Season 2", 
+    "9. Rent-a-Girlfriend",
+    "8. My Teen Romantic Comedy SNAFU Climax!",
+    "7. Toilet-bound Hanako-kun",
+    "6. A Certain Scientific Railgun T",
+    "5. Haikyuu!!: To the Top 2nd Season",
+    "4. Re:ZERO -Starting Life in Another World- Season 2",
+    "3. Kaguya-sama: Love is War Season 2",
+    "2. Violet Evergarden the Movie",
+    "1. Jujutsu Kaisen"
+];
+
+var top10_2020Images = [
+    "fire force2.jpg",
+    "rent-a-girlfriend.jpg",
+    "My Teen Romantic Comedy SNAFU Climax!.jpg",
+    "toilet-bound.jpg",
+    "railgun t.jpg",
+    "Haikyuu!! To the Top 2nd Season.jpg",
+    "reZERO season 2.jpg",
+    "Kaguya-sama Love is War Season 2.jpg",
+    "Violet Evergarden the Movie.jpg",
+    "jujutsu kaisen.jpg"
+];
+
 index = 0;
 
-function change_text(direction){
+function change_text(direction, year){
     if (direction == 'Back' && index != 0) index--;
     else if (direction == 'Next') index++;
-    document.getElementById("2021Text").innerHTML = top10_2021[index];
-    document.getElementById("2021Image").setAttribute('src', `images/2021/${top10_2021Images[index]}`);
+    if (year == '2021'){
+        document.getElementById("2021Text").innerHTML = top10_2021[index];
+        document.getElementById("2021Image").setAttribute('src', `images/2021/${top10_2021Images[index]}`);
+    }else if (year == '2020'){
+        document.getElementById("2020Text").innerHTML = top10_2020[index];
+        document.getElementById("2020Image").setAttribute('src', `images/2020/${top10_2020Images[index]}`);
+    }
     if (index == 9) index = -1;
 }
 
