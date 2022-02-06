@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="icons/gura.ico"/>
 </head>
 
-<body id="grad">
+<body class="home">
     <script src="js/script.js"></script>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -22,13 +22,15 @@
         <a href="index.html" target=_self>Home</a>
     </div>
 
-    <span style="color: white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; sidebar</span>
+    <span id="taskButton" onclick="openNav()">&#9776; sidebar</span>
 
-    <font color="white">
+    <font id="font">
 
-    <h1> Home </h1>
+    <div>
+        <h1>Home<img src="icons/moon.png" id="icon"></h1>
+    </div>
 
-    <div style="text-align: center;">
+    <div style="text-align: center; border: solid 3px; padding: 10px;">
         <video controls autoplay loop>
             <source src="videos/rick.mp4" type=video/mp4>
         </video>
@@ -82,13 +84,11 @@
         </div>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
     <h2>More to come in the future</h2>
 
-    <p align="center">
+    <div style="text-align: center;">
         <img src="gifs/ayanokoji.gif" width=800px height=500px>
-    </p>
+    </div>
     <BR>
     <div style="text-align: center;">
         Enter Name:
@@ -96,10 +96,18 @@
         <button onclick="changeName()">Submit</button>
         <p style="font-size: large;"id="demo"></p>
     </div>
+    
+    <div style="margin-top: 500px;"></div>
+
+    <div style="text-align: center;">
+        <img src="gifs/shelterYawn.gif" width=810px height=810px>
+    </div>
 
     <div class="space"></div>
 
     </font>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
