@@ -188,3 +188,31 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+var icon = document.getElementById("icon");
+
+// if (localStorage.getItem("theme") == null){
+//     localStorage.setItem("theme", "light");
+// }
+
+// let localData = localStorage.getItem("theme");
+
+// if (localData == "light"){
+//     icon.src = "icons/moon.png";
+//     document.body.classList.remove("dark-theme");
+// }else if(localData == "dark"){
+//     icon.src ="icons/sun.png";
+//     document.body.classList.add("dark-theme");
+// }
+
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")){
+        icon.src ="icons/sun.png";
+        localStorage.setItem("theme", "dark");
+    }else{
+        icon.src = "icons/moon.png";
+        localStorage.setItem("theme", "light");
+    }
+}
+
