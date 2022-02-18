@@ -159,6 +159,58 @@ var top10_2020Images = [
     "jujutsu kaisen.jpg"
 ];
 
+var top10_2019 = [
+    "10. The Quintessential Quintuplets",
+    "9. One Punch Man 2nd Season",
+    "8. Fire Force",
+    "7. Dr. Stone", 
+    "6. Kaguya-sama: Love is War",
+    "5. Demon Slayer: Kimetsu no Yaiba",
+    "4. The Rising of the Shield Hero",
+    "3. Vinland Saga",
+    "2. Mob Psycho 100 II",
+    "1. Attack on Titan Season 3 Part 2"
+];
+
+var top10_2019Images = [
+    "quintessential quintuplets.jpg",
+    "one punch man 2nd season.jpg",
+    "fire force.jpg",
+    "dr stone.jpg",
+    "love is war.jpg",
+    "demon slayer.jpg",
+    "shield hero.jpg",
+    "vinland saga.jpg",
+    "mob psycho 100 2.jpg",
+    "aotp2.jpg"
+];
+
+var top10_2018 = [
+    "10. ",
+    "9. ",
+    "8. ",
+    "7. ",
+    "6. ",
+    "5. ",
+    "4. ",
+    "3. ",
+    "2. ",
+    "1. "
+];
+
+var top10_2018Images = [
+    ".jpg",
+    ".jpg",
+    ".jpg",
+    ".jpg",
+    ".jpg",
+    ".jpg",
+    ".jpg",
+    ".jpg",
+    ".jpg",
+    ".jpg"
+];
+
 index = 0;
 
 function change_text(direction, year){
@@ -170,6 +222,12 @@ function change_text(direction, year){
     }else if (year == '2020'){
         document.getElementById("2020Text").innerHTML = top10_2020[index];
         document.getElementById("2020Image").setAttribute('src', `images/2020/${top10_2020Images[index]}`);
+    }else if (year == '2019'){
+        document.getElementById("2019Text").innerHTML = top10_2019[index];
+        document.getElementById("2019Image").setAttribute('src', `images/2019/${top10_2019Images[index]}`);
+    }else if (year == '2018'){
+        document.getElementById("2018Text").innerHTML = top10_2018[index];
+        document.getElementById("2018Image").setAttribute('src', `images/2018/${top10_2018Images[index]}`);
     }
     if (index == 9) index = -1;
 }
