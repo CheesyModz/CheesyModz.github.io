@@ -186,29 +186,29 @@ var top10_2019Images = [
 ];
 
 var top10_2018 = [
-    "10. ",
-    "9. ",
-    "8. ",
-    "7. ",
-    "6. ",
-    "5. ",
-    "4. ",
-    "3. ",
-    "2. ",
-    "1. "
+    "10. Tada Never Falls in Love",
+    "9. Wotakoi: Love is Hard for Otaku",
+    "8. That Time I Got Reincarnated as a Slime",
+    "7. Banana Fish",
+    "6. Asobi Asobase: Workshop of Fun",
+    "5. Rascal Does Not Dream of Bunny Girl Senpai",
+    "4. My Hero Academia 3",
+    "3. JoJo's Bizarre Adventure: Golden Wind",
+    "2. Violet Evergarden",
+    "1. Attack on Titan Season 3"
 ];
 
 var top10_2018Images = [
-    ".jpg",
-    ".jpg",
-    ".jpg",
-    ".jpg",
-    ".jpg",
-    ".jpg",
-    ".jpg",
-    ".jpg",
-    ".jpg",
-    ".jpg"
+    "tada never falls in love.jpg",
+    "love is hard for otaku.jpg",
+    "slime.jpg",
+    "banana fish.jpg",
+    "asobi asobase.jpg",
+    "bunny girl.jpg",
+    "mha 3.jpg",
+    "jojo.jpg",
+    "violet evergarden.jpg",
+    "aot s3.jpg"
 ];
 
 index = 0;
