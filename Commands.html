@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="icons/gura.ico"/>
+</head>
+
+<body style="background-color:grey;">
+    <script src="js/script.js"></script>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Anime.html" target=_self>Anime</a>
+        <a href="Commands.html" target=_self>Bot Commands</a>
+        <a href="COTE.html" target=_self>COTE</a>
+        <a href="Connections.html" target=_self>Connections</a>
+        <a href="Courses.html" target=_self>Courses Rating</a>
+        <a href="Games.html" target=_self>Games</a>
+        <a href="index.html" target=_self>Home</a>
+        <a href="Music.html" target=_self>Music</a>
+        <a href="Vtuber.html" target=_self>Vtuber Stuff</a>
+    </div>
+
+    <span style="color: white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; sidebar</span>
+    <font color="white">
+    <h1> Discord Bot Commands </h1>
+
+    <div id="toc_container">
+        <p class="toc_title">Contents</p>
+        <ul style="text-align: center;">
+            <li><a href="#admin">1. Admin Commands</a></li><br>
+            <li><a href="#economy">2. Economy Commands</a></li><br>
+            <li><a href="#fun">3. Fun Commands</a></li><br>
+            <li><a href="#gamble">4. Gamble Commands</a></li><br>
+            <li><a href="#game">5. Game Commands</a></li><br>
+            <li><a href="#information">6. Information Commands</a></li><br>
+            <li><a href="#noCategory">7. No Category Commands</a></li><br>
+            <li><a href="#contact">8. Contact</a></li><br>
+        </ul>
+    </div>
+
+    <h2 id="admin"> Admin Commands</h2>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                    <th>Admin Commands</th>
+                    <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>avatar</td>
+                <td>Avatar will give print the discord user's profile picture.<BR>
+                    How to use, >avatar @mention<BR>
+                    Example >avatar @ƙag ItsCheeseModz#1997</td>
+            </tr>
+            <tr>
+                <td>ban</td>
+                <td>Ban a user from the discord server.<BR>
+                    How to use, >ban @mention reason<BR>
+                    Example >ban @ƙag ItsCheeseModz#1997 spamming</td>
+            </tr>
+            <tr>
+                <td>dm</td>
+                <td>Direct Message a discord user.<BR>
+                    How to use, >dm @mention message<BR>
+                    Example >dm @ƙag ItsCheeseModz#1997 Hello! How are you?</td>
+            </tr>
+            <tr>
+                <td>invite</td>
+                <td>Creates an invite link for the discord server (limited time).<BR>
+                    How to use, >invite<BR>
+                    Example >invite?</td>
+            </tr>
+            <tr>
+                <td>kick</td>
+                <td>Kick a user from the discord server.<BR>
+                    How to use, >kick @mention reason<BR>
+                    Example >kick @ƙag ItsCheeseModz#1997 spamming</td>
+            </tr>
+            <tr>
+                <td>mute</td>
+                <td>Mick a user.<BR>
+                    How to use, >mute @mention reason<BR>
+                    Example >mute @ƙag ItsCheeseModz#1997 spamming</td>
+            </tr>
+            <tr>
+                <td>purge</td>
+                <td>Deletes text in a channel.<BR>
+                    How to use, >purge number<BR>
+                    Example >purge 10</td>
+            </tr>
+            <tr>
+                <td>unban</td>
+                <td>Unbans a user from the discord server.<BR>
+                    How to use, >unban member<BR>
+                    Example >unban ƙag ItsCheeseModz#1997</td>
+            </tr>
+            <tr>
+                <td>unmute</td>
+                <td>Unmutes a user.<BR>
+                    How to use, >unmute member<BR>
+                    Example >unmute ƙag ItsCheeseModz#1997</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="economy"> Economy Commands</h2>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                    <th>Economy Commands</th>
+                    <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>bag</td>
+                <td>Check items currently in your bag.<BR>
+                    How to use, >bag<BR>
+                    Example >bag</td>
+            </tr>
+            <tr>
+                <td>bal</td>
+                <td>Check balance in bank and wallet.<BR>
+                    How to use, >bal @mention<BR>
+                    Example >bal @ƙag ItsCheeseModz#1997</td>
+            </tr>
+            <tr>
+                <td>beg</td>
+                <td>Beg for money and the discord bot will give you some.<BR>
+                    How to use, >beg<BR>
+                    Example >beg</td>
+            </tr>
+            <tr>
+                <td>buy</td>
+                <td>Buy items currently displayed on the shop.<BR>
+                    How to use, >buy item amount<BR>
+                    Example >buy laptop 2</td>
+            </tr>
+            <tr>
+                <td>deposit</td>
+                <td>Deposit money currently in wallet to bank.<BR>
+                    How to use, >deposit amount<BR>
+                    Example >deposit 1000</td>
+            </tr>
+            <!-- <tr>
+                <td>leaderboard</td>
+                <td>Displays the richest players in the server.<BR>
+                    How to use, >leaderboard<BR>
+                    Example >leaderboard</td>
+            </tr> -->
+            <tr>
+                <td>rob</td>
+                <td>Attempt to rob from one's wallet.<BR>
+                    How to use, >rob @mention<BR>
+                    Example >rob @ƙag ItsCheeseModz#1997</td>
+            </tr>
+            <tr>
+                <td>sell</td>
+                <td>Sell item in your bag.<BR>
+                    How to use, >sell item amount<BR>
+                    Example >sell laptop 1</td>
+            </tr>
+            <tr>
+                <td>send</td>
+                <td>Send money to one's wallet.<BR>
+                    How to use, >send @mention number<BR>
+                    Example >send @ƙag ItsCheeseModz#1997 100</td>
+            </tr>
+            <tr>
+                <td>shop</td>
+                <td>Display items for sale in the shop.<BR>
+                    How to use, >shop<BR>
+                    Example >shop</td>
+            </tr>
+            <tr>
+                <td>withdraw</td>
+                <td>Withdraws money from bank.<BR>
+                    How to use, >withdraw amount<BR>
+                    Example >withdraw 100</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="fun"> Fun Commands</h2>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                    <th>Fun Commands</th>
+                    <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8ball</td>
+                <td>Magic 8 ball will give you answers and predictions to your questions that may or may not be true.<BR>
+                    How to use, >8ball message<BR> 
+                    Example >8ball Am I lucky?</td>
+            </tr>
+            <tr>
+                <td>about</td>
+                <td>About will give you a description about the discord bot and print the link to my website.<BR>
+                    How to use, >about<BR>
+                    Example >about</td>
+            </tr>
+            <tr>
+                <td>code</td>
+                <td>Displays code.<BR>
+                    How to use, >code language code<BR>
+                    Example >code python print("Hello World.")</td>
+            </tr>
+            <tr>
+                <td>gary</td>
+                <td>Pings @ƙag #1997.<BR>
+                    How to use, >gary<BR>
+                    Example >gary</td>
+            </tr>
+            <tr>
+                <td>genshin</td>
+                <td>Wish for a character in genshin that is your waifu/husbando.<BR>
+                    How to use, >genshin<BR>
+                    Example >genshin</td>
+            </tr>
+            <tr>
+                <td>headpats</td>
+                <td>Headpats a user.<BR>
+                    How to use, >headpats @mention<BR>
+                    Example >headpats @ƙag ItsCheeseModz#1997</td>
+            </tr>
+            <tr>
+                <td>hello</td>
+                <td>Says hello to the discord bot.<BR>
+                    How to use, >hello<BR>
+                    Example >hello</td>
+            </tr>
+            <tr>
+                <td>hug</td>
+                <td>Hugs a user.<BR>
+                    How to use, >hug @mention<BR>
+                    Example >hug @ƙag ItsCheeseModz#1997</td>
+            </tr>
+            <tr>
+                <td>kiss</td>
+                <td>Kisses a user.<BR>
+                    How to use, >kiss @mention<BR>
+                    Example >kiss @ƙag ItsCheeseModz#1997</td>
+            </tr>
+            <tr>
+                <td>mark1</td>
+                <td>Pings Mark.<BR>
+                    How to use, >mark1<BR>
+                    Example >mark1</td>
+            </tr>
+            <tr>
+                <td>mark2</td>
+                <td>Pings Mark.<BR>
+                    How to use, >mark2<BR>
+                    Example >mark2</td>
+            </tr>
+            <tr>
+                <td>meme</td>
+                <td>Displays a meme from the subreddit of your choice, default being r/memes.<BR>
+                    How to use, >meme subreddit<BR>
+                    Example >meme anime</td>
+            </tr>
+            <tr>
+                <td>poll</td>
+                <td>Makes a poll in chat.<BR>
+                    How to use, >poll message<BR>
+                    Example >poll Do you like cheese?</td>
+            </tr>
+            <tr>
+                <td>quote</td>
+                <td>Quote someone.<BR>
+                    How to use, >quote @mention message<BR>
+                    Example >quote @ƙag ItsCheeseModz#1997 Hello World!</td>
+            </tr>
+            <tr>
+                <td>roll</td>
+                <td>Roll for a number between the range 1 to inputed value.<BR>
+                    How to use, >roll number<BR>
+                    Example >roll 5</td>
+            </tr>
+            <tr>
+                <td>say</td>
+                <td>Make the discord bot say certain messages.<BR>
+                    How to use, >say message<BR>
+                    Example >say Hello</td>
+            </tr>
+            <tr>
+                <td>slap</td>
+                <td>Slap a user.<BR>
+                    How to use, >slap @mention<BR>
+                    Example >slap @ƙag ItsCheeseModz#1997</td>
+            </tr>
+            <tr>
+                <td>waifu</td>
+                <td>Rates your waifu.<BR>
+                    How to use, >waifu name<BR>
+                    Example >waifu Miku Nakano</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="gamble"> Gamble Commands</h2>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                    <th>Gamble Commands</th>
+                    <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>coin</td>
+                <td>Gamble money on chances for heads or tails.<BR>
+                    How to use, >coin side amount<BR>
+                    Example >coin heads 100</td>
+            </tr>
+            <tr>
+                <td>slots</td>
+                <td>Gamble wallet money on the slot machine for a chance to win.<BR>
+                    How to use, >slots number<BR>
+                    Example >slots 100</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="game"> Game Commands</h2>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                    <th>Game Commands</th>
+                    <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td>fourinarow</td>
+                <td>Play Connect Four against a user.<BR>
+                    How to use, >fourinarow @mention<BR>
+                    Example >fourinarow @ƙag ItsCheeseModz#1997</td>
+            </tr> -->
+            <tr>
+                <td>put</td>
+                <td>Place X or O on a tictactoe board.<BR>
+                    How to use, >put number<BR>
+                    Example >put 5</td>
+            </tr>
+            <tr>
+                <td>tictactoe</td>
+                <td>Play tictactoe against a user.<BR>
+                    How to use, >tictactoe @mention<BR>
+                    Example >tictactoe @ƙag ItsCheeseModz#1997</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="information"> Information Commands</h2>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                    <th>Information Commands</th>
+                    <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>github</td>
+                <td>Displays one's GitHub repositories.<BR>
+                    How to use, >github username<BR>
+                    Example >github CheesyModz</td>
+            </tr>
+            <tr>
+                <td>hololive</td>
+                <td>Displays Hololive stream schedules.<BR>
+                    How to use, >hololive<BR>
+                    Example >hololive</td>
+            </tr>
+            <tr>
+                <td>mal</td>
+                <td>Displays one's MyAnimeList profile.<BR>
+                    How to use, >mal Username<BR>
+                    Example >mal CheesyModz</td>
+            </tr>
+            <tr>
+                <td>pokemon</td>
+                <td>Display information about a pokemon.<BR>
+                    How to use, >pokemon name<BR>
+                    Example >pokemon snorlax</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="noCategory"> No Category Commands</h2>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                    <th>No Category Commands</th>
+                    <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>help</td>
+                <td>Prints the list of commands with a brief description.<BR>
+                    How to use, >help<BR>
+                    Example >help</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="contact"> Contact me on discord for more information</h2>
+
+    </font>
+
+    <div class="cards">
+        <div class="card" data-tilt data-tilt-max="10"
+        data-tilt-scale="1.1">
+            <p class="cardTitle">Discord</p>
+            <img class="card" src="icons/Apps/discord.png">
+            <div style="display: inline-block; vertical-align:top; padding: 50px;">
+                <p>Username: ƙag ItsCheeseModz#1997</p>
+                <p>Note: Copy username (the k is a special character)</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/vanilla-tilt.js"></script>
+
+    <h2 style="color: skyblue">More commands to come in the future!</h2>
+
+</body>
+
+</html>

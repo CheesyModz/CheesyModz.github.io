@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="icons/gura.ico"/>
+</head>
+
+<body style="background-color:black;">
+    <script src="js/script.js"></script>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Anime.html" target=_self>Anime</a>
+        <a href="Commands.html" target=_self>Bot Commands</a>
+        <a href="COTE.html" target=_self>COTE</a>
+        <a href="Connections.html" target=_self>Connections</a>
+        <a href="Courses.html" target=_self>Courses Rating</a>
+        <a href="Games.html" target=_self>Games</a>
+        <a href="index.html" target=_self>Home</a>
+        <a href="Music.html" target=_self>Music</a>
+        <a href="Vtuber.html" target=_self>Vtuber Stuff</a>
+    </div>
+
+    <span style="color: white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; sidebar</span>
+
+    <font color="white">
+
+    <p style="text-align: center;"> Under construction </p>
+
+    <h1> 8ball </h1>
+
+    <div style="text-align: center;">
+        <p>Click on 8ball when you are ready</p>
+        <form>
+            <label for="input">Input:</label>
+            <input type="text" id="input" name="input">
+        </form>
+        <br>
+        <button onclick="response()">
+            <img src="images/8ball.png">
+        </button>
+        <p id="output"></p>
+    </div>
+    </font>
+</body>
+
+<body onload="startGame()"></body>
+    <div style="text-align:center;width:480px;">
+        <button onclick="moveup()">UP</button><br><br>
+        <button onclick="moveleft()">LEFT</button>
+        <button onclick="moveright()">RIGHT</button><br><br>
+        <button onclick="movedown()">DOWN</button>
+    </div>
+
+</body>
+
+</html>
