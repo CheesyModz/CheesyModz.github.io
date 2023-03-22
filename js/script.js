@@ -323,8 +323,8 @@ function changePicture(direction){
     "Laplus 7", "Lofi", "Lui", "Lui 2", "Lui 3", "Luna", "Masturi", 
     "Mel", "Mel 2", "MelRushia", "Miko", "Minami", "Nene", "Noel",
     "Noel 2", "Rushia", "Rushia 2", "Rushia 3", "Rushia 4", "Rushia 5", "Rushia 6", 
-    "Rushia 7", "Rushia 8",  "Towa", "Towa 2", "Towa 3", "Towa 4","Towa 5", 
-    "Towa 6", "Towa 7", "veibae", "veibae 2", "veibae 3", "veibae 4", "Watame", "Yuzu"
+    "Rushia 7", "Rushia 8", "Saki", "Towa", "Towa 2", "Towa 3", "Towa 4","Towa 5", 
+    "Towa 6", "Towa 7", "Tricky", "Tricky 1", "veibae", "veibae 2", "veibae 3", "veibae 4", "Watame", "Yuzu"
     ];
 
     if (direction == 'Back' && index != 0) index--;
