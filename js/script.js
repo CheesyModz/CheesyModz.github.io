@@ -5,13 +5,13 @@ var imgArray = [
                 "images/ayaka.jpg",
                 "images/Kei Karuizawa.jpg"
                 ];
-i = 0;
+indexImage = 0;
 
 function myFunction() {
-    i++;
-    document.getElementById("myImg").src = imgArray[i];
-    if (i == imgArray.length - 1) {
-        i = -1;
+    indexImage++;
+    document.getElementById("myImg").src = imgArray[indexImage];
+    if (indexImage == imgArray.length - 1) {
+        indexImage = -1;
     }
 }
 
