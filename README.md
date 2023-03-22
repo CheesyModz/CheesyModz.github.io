@@ -7,6 +7,9 @@ For fun website that contains videos, images, gifs, animations, emojis, discord 
 
 More to come in the future
 
+# NOTE
+In the process of fixing / cleaning up stuff
+
 # Contact - For feedback/suggestions and/or issues/support
 Email: Garyhuang325@gmail.com
 
