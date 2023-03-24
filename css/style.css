@@ -1,3 +1,26 @@
+/* CSS for all */
+/* ------------------------------------------------ */
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+}
+  
+li {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 25px;
+}
+
 button {
     background-color: cadetblue;
     cursor: pointer;
@@ -17,6 +40,122 @@ button {
     color: #4cc9f0;
 }
 
+#toc_container{
+    border: 1px solid black;
+    display: table;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+    width: auto;
+
+}
+
+.toc_title{
+    font-weight: 700;;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.cards{
+    perspective: 1000px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+}
+
+.card{
+    width: 640px;
+    background-color: #4cc9f0;
+    height: 320px;
+    opacity: 0.7;
+    border-radius: 20px;
+    align-items: center;
+}
+
+p.cardTitle{
+    color: black;
+    text-align: center;
+    font-size: larger;
+    padding-top: 5mm;
+}
+
+img.card{
+    padding-left: 15px;
+    padding-top: 10px;
+    width: auto;
+    height: 200px;
+    opacity: 0.85;
+}
+
+.btnLeft {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ff6d74;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnLeft:hover{
+    color: #ff003f;
+}
+
+.btnRight {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #d997ff;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnRight:hover{
+    color: #8f00f1;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    background-color: crimson;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    font-size: 25px;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 32px;
+    color: blue;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: gray;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    font-size: 40px;
+    margin-left: 200px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 20px;}
+}
+/* ------------------------------------------------ */
+
+/* CSS for anime.html */
+/* ------------------------------------------------ */
 img.waifu {
     width: 450px;
     height: 600px;
@@ -28,44 +167,87 @@ video.waifu{
     cursor: pointer;
 }
 
-ul {
-    list-style-type: none;
-    margin: 10;
-    padding: 10;
-}
-  
-li {
-    display: inline-block;
-    margin-right: 50px;
-    font-size: 25px;
-}
-
-h1{
-    font-size: 50px;
-    text-align: center;
-}
-
-h2{
-    text-align: center;
-}
-
 p.waifu {
     font-weight: bold;
     font-size: 30px;
     text-align: center;
+    color: lightgreen;
 }
 
 p.video {
     font-size: 30px;
     text-align: center;
+    color: lightgreen;
 }
 
-
-canvas {
-    border:1px solid white;
-    background-color: gray;
+.containerr { 
+    background-image: url("../images/hololive.jfif");
+    height: 1400px;
+    position: relative;
+    border: 3px solid green; 
 }
 
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.parallax {
+    background-image: url("../images/kei.jfif");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px){
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+.collapsible{
+    background-color: transparent;
+    border: 3px solid;
+    border-radius: 10px;
+    font-size: 50px;
+    opacity: 0.8;
+    color: lightgreen; 
+    width: 100%;
+    height: 100px;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: transparent;
+}
+/* ------------------------------------------------ */
+
+/* CSS for commands.html */
+/* ------------------------------------------------ */
 .content-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -105,26 +287,17 @@ canvas {
 .content-table tbody tr:last-of-type {
     border-bottom: 2px solid lightcoral;
 }
+/* ------------------------------------------------ */
 
-.review-table {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+/* CSS for connections.html */
+/* ------------------------------------------------ */
+.SpacingHorizontal{
+    padding: 30px;
 }
+/* ------------------------------------------------ */
 
-.review-table thead tr {
-    background-color: darkcyan;
-    font-weight: bold;
-}
-
-.review-table th,
-.review-table td {
-    padding: 10px 25px;
-}
-
-.review-table tbody tr {
-    border-bottom: 10px solid black;
-    background-color: darkgrey;
-}
-
+/* CSS for cote.css */
+/* ------------------------------------------------ */
 .rating-table {
     border: 2px solid black;
     margin: auto;
@@ -142,6 +315,7 @@ canvas {
     padding: 2.5em;
     font-size: 150%;
 }
+
 
 /*
 Background colours for the tier list column 1
@@ -194,137 +368,6 @@ Background colours for the tier list column 1
     text-align: center;
 }
 
-
-.space {
-    margin-top: 1500px;
-}
-
-/* #grad {
-    height: 100%;
-    background-image: linear-gradient(to bottom right, rgba(0, 255, 255, 1), rgb(183, 0, 255));
-} */
-
-.slide {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: relative;
-    animation: box-slide 5s infinite;
-}
-
-@keyframes box-slide {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;}
-  }
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: relative;
-    animation: box-spin 6s infinite;
-    transform-origin: 70% 70%;
-}
-
-@keyframes box-spin {
-    0%   {background-color:red; left:0px; top:0px;
-          transform: rotate( 0.0deg)}
-    25%  {background-color:yellow; left:200px; top:0px;
-          transform: rotate( 90.0deg)}
-    50%  {background-color:blue; left:200px; top:200px;
-          transform: rotate( 90.0deg)}
-    75%  {background-color:green; left:0px; top:200px;
-          transform: rotate( 90.0deg)}
-    100% {background-color:red; left:0px; top:0px;
-          transform: rotate( 90.0deg)}
-  }
-
-.containerr { 
-    background-image: url("../images/hololive.jfif");
-    height: 1400px;
-    position: relative;
-    border: 3px solid green; 
-}
- 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-
-.wave {
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  
-  100% { transform: rotate( 0.0deg) }
-}
-
-.parallax {
-    background-image: url("../images/kei.jfif");
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media only screen and (max-device-width: 1366px){
-    .parallax {
-        background-attachment: scroll;
-    }
-}
-
-.cards{
-    perspective: 1000px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    padding: 20px;
-}
-
-.card{
-    width: 640px;
-    background-color: #4cc9f0;
-    height: 320px;
-    opacity: 0.7;
-    border-radius: 20px;
-    align-items: center;
-}
-
-.SpacingHorizontal{
-    padding: 30px;
-}
-
-p.cardTitle{
-    color: black;
-    text-align: center;
-    font-size: larger;
-    padding-top: 5mm;
-}
-
-img.card{
-    padding-left: 15px;
-    padding-top: 10px;
-    width: auto;
-    height: 200px;
-    opacity: 0.85;
-}
-
 .wrapper{
     margin: 0 auto;
     width: 900px;
@@ -350,99 +393,40 @@ img.card{
 .contain:hover .overlay {
     opacity: 1;
 }
+/* ------------------------------------------------ */
 
-/* .header{
-    height: 150px;
-    width: 1000px;
-    padding: 40px;
-    opacity: 0.9;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-} */
-
-#toc_container{
-    border: 1px solid black;
-    display: table;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: medium;
-    width: auto;
-
+/* CSS for courses.html */
+/* ------------------------------------------------ */
+.review-table {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
 }
 
-.toc_title{
-    font-weight: 700;;
-    text-align: center;
-    font-size: xx-large;
-}
-
-.btnLeft {
-    border: 1px solid;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #ff6d74;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.btnLeft:hover{
-    color: #ff003f;
-}
-
-.btnRight {
-    border: 1px solid;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #d997ff;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.btnRight:hover{
-    color: #8f00f1;
-}
-
-.collapsible{
-    background-color: transparent;
-    border: 3px solid;
-    border-radius: 10px;
-    font-size: 50px;
-    opacity: 0.8;
-    color: lightgreen; 
-    width: 100%;
-    height: 100px;
-    padding: 18px;
-    cursor: pointer;
-}
-
-.active, .collapsible:hover {
-    background-color: #555;
-}
-
-.collapsible:after {
-    content: '\002B';
-    color: white;
+.review-table thead tr {
+    background-color: darkcyan;
     font-weight: bold;
-    float: right;
-    margin-left: 5px;
 }
 
-.active:after {
-    content: "\2212";
+.review-table th,
+.review-table td {
+    padding: 10px 25px;
 }
 
-.content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    background-color: transparent;
+.review-table tbody tr {
+    border-bottom: 10px solid black;
+    background-color: darkgrey;
 }
+/* ------------------------------------------------ */
 
+/* CSS for games.html */
+/* ------------------------------------------------ */
+canvas {
+    border:1px solid white;
+    background-color: gray;
+}
+/* ------------------------------------------------ */
+
+/* CSS for index.html */
+/* ------------------------------------------------ */
 #icon{
     width: 50px;
     cursor: pointer;
@@ -474,3 +458,116 @@ img.card{
 #font{
     color: var(--secondary-color);
 }
+
+.space {
+    margin-top: 1500px;
+}
+
+.slide {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: box-slide 5s infinite;
+}
+
+@keyframes box-slide {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: box-spin 6s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes box-spin {
+    0%   {background-color:red; left:0px; top:0px;
+          transform: rotate( 0.0deg)}
+    25%  {background-color:yellow; left:200px; top:0px;
+          transform: rotate( 90.0deg)}
+    50%  {background-color:blue; left:200px; top:200px;
+          transform: rotate( 90.0deg)}
+    75%  {background-color:green; left:0px; top:200px;
+          transform: rotate( 90.0deg)}
+    100% {background-color:red; left:0px; top:0px;
+          transform: rotate( 90.0deg)}
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  
+  100% { transform: rotate( 0.0deg) }
+}
+/* ------------------------------------------------ */
+
+/* CSS for music.html */
+/* ------------------------------------------------ */
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+}
+
+.particles{
+    position: relative;
+    display: flex;
+}
+
+.particles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px red,
+    0 0 25px orange,
+    0 0 50px red;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.particles span:nth-child(even){
+    background: lightblue;
+    box-shadow: 0 0 0 10px lightgreen,
+    0 0 25px lightblue,
+    0 0 50px lightblue;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+/* ------------------------------------------------ */
+
+/* CSS for vtuber.html */
+/* ------------------------------------------------ */
+
+/* ------------------------------------------------ */

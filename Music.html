@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="shortcut icon" type="image/png" href="icons/gura.ico"/>
     <style>
         html{
@@ -15,49 +14,6 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;;
             color: white;
-        }
-        
-        .container{
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: visible;
-        }
-
-        .particles{
-            position: relative;
-            display: flex;
-        }
-
-        .particles span{
-            position: relative;
-            width: 30px;
-            height: 30px;
-            background: yellow;
-            margin: 0 4px;
-            border-radius: 50%;
-            box-shadow: 0 0 0 10px red,
-            0 0 25px orange,
-            0 0 50px red;
-            animation: animate 15s linear infinite;
-            animation-duration: calc(125s / var(--i));
-        }
-
-        .particles span:nth-child(even){
-            background: lightblue;
-            box-shadow: 0 0 0 10px lightgreen,
-            0 0 25px lightblue,
-            0 0 50px lightblue;
-        }
-
-        @keyframes animate {
-            0% {
-                transform: translateY(100vh) scale(0);
-            }
-            
-            100% {
-                transform: translateY(-10vh) scale(1);
-            }
         }
     </style>
 </head>
