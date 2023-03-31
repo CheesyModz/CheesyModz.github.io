@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="icons/gura.ico"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script>
         function allowDrop(ev) {
           ev.preventDefault();
@@ -50,86 +52,94 @@
 
     <h1>Create your own tier list</h1>
 
-    <div style="width:225px; height:3000px; border: 1px solid black; float: left; margin-right: 3px;">
-        <div id="imagesList" style="padding:5px;float:left;"></div>
-        <script>
-            maleNames = ["Akito Miyake", "Albert Yamada", "Haruki Yamauchi", "Hayato Kito", "Ikuto Kiriyama", "Kakeru Ryuen", "Kanji Ike",
-                        "Kazuomi Hosen", "Ken Sudo", "Kiyotaka Ayanokoji", "Kohei Katsuragi", "Kyogo Komiya", "Manabu Horikita",
-                        "Masayoshi Hashimoto", "Miyabi Nagumo", "Riku Utomiya", "Rokusuke Koenji", "Ryuji Kanzaki", "Satoru Kaneda",
-                        "Takuya Yagami", "Teruhiko Yukimura", "Yahiko Totsuka", "Yosuke Hirata"];
-            
-            for (let i=0; i<maleNames.length;i++){
-                data = `<img id="drag${i}" src="icons/Males/${maleNames[i]}.png" draggable="true" ondragstart="drag(event)" width="100px" height="100px">`;
-                document.getElementById("imagesList").innerHTML += data;
-            }
-        </script>
+    <div class="containerCenter" id="imageDownload">
+        <table class="rating-table" style="display:inline-block;">
+            <tbody>
+                <tr>
+                    <th rowspan="8" id="imagesList" style="padding:5px;"></th>
+                    <td id="Splus" style="border-left: 2px solid black;">S+</td>
+                    <script>
+                        data = "";
+                        maleNames = ["Akito Miyake", "Albert Yamada", "Haruki Yamauchi", "Hayato Kito", "Ikuto Kiriyama", "Kakeru Ryuen", "Kanji Ike",
+                                    "Kazuomi Hosen", "Ken Sudo", "Kiyotaka Ayanokoji", "Kohei Katsuragi", "Kyogo Komiya", "Manabu Horikita",
+                                    "Masayoshi Hashimoto", "Miyabi Nagumo", "Riku Utomiya", "Rokusuke Koenji", "Ryuji Kanzaki", "Satoru Kaneda",
+                                    "Takuya Yagami", "Teruhiko Yukimura", "Yahiko Totsuka", "Yosuke Hirata"];
+                        
+                        for (let i=0; i<maleNames.length;i++){
+                            data += `<img style="float:left;" id="drag${i}" src="icons/Males/${maleNames[i]}.png" draggable="true" ondragstart="drag(event)" width="100px" height="100px">`;
+                        }
+        
+                        femaleNames = ["Airi Sakura", "Akane Tachibana", "Arisu Sakayanagi", "Chiaki Matsushita", "Chie Hoshinomiya", 
+                                        "Fuka Kiryuin", "Haruka Hasebe", "Hiyori Shiina", "Honami Ichinose", "Ichika Amasawa", "Kayano Onodera",
+                                        "Kei Karuizawa", "Kikyo Kushida", "Masumi Kamuro", "Maya Sato", "Mei-Yu Wang", "Miki Yamamura",
+                                        "Mio Ibuki", "Sae Chabashira", "Satsuki Shinohara", "Suzune Horikita", "Takeko Nishino", "Tsubasa Nanase", "Yuki Himeno"];
+        
+                        for (let i=0; i<femaleNames.length;i++){
+                            data += `<img style="float:left;" id="drag${i+maleNames.length}" src="icons/Females/${femaleNames[i]}.png" draggable="true" ondragstart="drag(event)" width="100px" height="100px">`;
+                        }
+        
+                        document.getElementById("imagesList").innerHTML += data;
+                    </script>
+                    <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                </tr>
+                <tr>
+                    <td id="S" style="border-left: 2px solid black;">S</td>
+                    <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="A" style="border-left: 2px solid black;">A</td>
+                    <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                </tr>
+                <tr>
+                    <td id="B" style="border-left: 2px solid black;">B</td>
+                    <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                </tr>
+                <tr>
+                    <td id="C" style="border-left: 2px solid black;">C</td>
+                    <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                </tr>
+                <tr>
+                    <td id="D" style="border-left: 2px solid black;">D</td>
+                    <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                </tr>
+                <tr>
+                    <td id="E" style="border-left: 2px solid black;">E</td>
+                    <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                </tr>
+                <tr>
+                    <td id="F" style="border-left: 2px solid black;">F</td>
+                    <td id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <table class="rating-table" style="float:left;">
-            <tr>
-                <td id="Splus">S+</td>
-                <td>
-                    <div class="wrapper">
-                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td id="S">S</td>
-                <td>
-                    <div class="wrapper">
-                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td id="A">A</td>
-                <td>
-                    <div class="wrapper">
-                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td id="B">B</td>
-                <td>
-                    <div class="wrapper">
-                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td id="C">C</td>
-                <td>
-                    <div class="wrapper">
-                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td id="D">D</td>
-                <td>
-                    <div class="wrapper">
-                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td id="E">E</td>
-                <td>
-                    <div class="wrapper">
-                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td id="F">F</td>
-                <td>
-                    <div class="wrapper">
-                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div style="text-align: center;">
+        <button id="download" class="downloadBtn"><i class="fa fa-download"></i> Download</button>
+        <p>Note: Download does not include images (in process of fixing)</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var element = $("#imageDownload");
+            var getCanvas;
+            var newData;
+
+            $("#download").on('click', function() {
+                html2canvas(element, {
+                    onrendered: function(canvas) {
+                        getCanvas = canvas;
+                        var imgageData = getCanvas.toDataURL("image/png");
+                        var a = document.createElement("a");
+                        a.href = imgageData; 
+                        a.download = "Image.png"; 
+                        a.click(); 
+                    }
+                });
+            });
+
+
+        });
+    </script>
 </body>
 </html>

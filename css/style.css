@@ -325,6 +325,10 @@ p.video {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
 }
 
+.rating-table th{
+    width:325px;
+}
+
 .rating-table tr td+td {
     width: 800px;
 }
@@ -418,9 +422,25 @@ Background colours for the tier list column 1
 #div1 {
     width: 900px;
     height: 200px;
-    border: 1px solid lightcoral;
-    background-color: black;
+    background-color: white;
     float: left;
+    margin:0;
+    padding:0;
+}
+
+.containerCenter{
+    text-align: center;
+}
+
+.downloadBtn{
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 20px;
+}
+
+.downloadBtn:hover{
+    opacity: 0.85;
 }
 
 /* ------------------------------------------------ */
