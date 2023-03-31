@@ -148,6 +148,27 @@ img.card{
     margin-left: 200px;
 }
 
+.subnav{
+    overflow: hidden;
+}
+
+.subnavButton{
+    font-size: 25px;
+    border: none;
+    background: none;
+    color: blue;
+    text-decoration: underline;
+}
+
+.subnav-content{
+    padding-left: 10px;
+    display: none;
+}
+
+.subnav:hover .subnav-content{
+    display: block;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 20px;}
@@ -296,7 +317,7 @@ p.video {
 }
 /* ------------------------------------------------ */
 
-/* CSS for cote.css */
+/* CSS for cote.html & cotetier.html */
 /* ------------------------------------------------ */
 .rating-table {
     border: 2px solid black;
@@ -393,6 +414,15 @@ Background colours for the tier list column 1
 .contain:hover .overlay {
     opacity: 1;
 }
+
+#div1 {
+    width: 900px;
+    height: 200px;
+    border: 1px solid lightcoral;
+    background-color: black;
+    float: left;
+}
+
 /* ------------------------------------------------ */
 
 /* CSS for courses.html */
