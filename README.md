@@ -15,4 +15,4 @@ Due to github pages not hosting sass or less `.css` files are contained under on
 # Contact - For feedback/suggestions and/or issues/support
 Email: Garyhuang325@gmail.com
 
-Discord: @ƙag ItsCheeseModz#1997
+Discord: @ƙag ItsCheeseModz
