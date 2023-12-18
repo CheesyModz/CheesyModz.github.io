@@ -469,7 +469,7 @@ Background colours for the tier list column 1
 
 /* CSS for games.html */
 /* ------------------------------------------------ */
-canvas {
+#myCanvas {
     border:1px solid white;
     background-color: gray;
 }
@@ -573,48 +573,7 @@ canvas {
 
 /* CSS for music.html */
 /* ------------------------------------------------ */
-.container{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: visible;
-}
 
-.particles{
-    position: relative;
-    display: flex;
-}
-
-.particles span{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background: yellow;
-    margin: 0 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px red,
-    0 0 25px orange,
-    0 0 50px red;
-    animation: animate 15s linear infinite;
-    animation-duration: calc(125s / var(--i));
-}
-
-.particles span:nth-child(even){
-    background: lightblue;
-    box-shadow: 0 0 0 10px lightgreen,
-    0 0 25px lightblue,
-    0 0 50px lightblue;
-}
-
-@keyframes animate {
-    0% {
-        transform: translateY(100vh) scale(0);
-    }
-    
-    100% {
-        transform: translateY(-10vh) scale(1);
-    }
-}
 /* ------------------------------------------------ */
 
 /* CSS for vtuber.html */
