@@ -49,6 +49,7 @@ function startGame() {
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
+    canvas : setAttribute("id", "myCanvas"),
     start : function() {
         this.canvas.width = 480;
         this.canvas.height = 270;
