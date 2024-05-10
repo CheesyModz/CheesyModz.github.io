@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="icons/gura.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html{
+            background-color: pink;
+        }
+        
+        .imageBear{
+            border-radius: 50%;
+        }
+
+        .buttonValentine{
+            font-size: large;
+            background-color: white;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            width: auto;
+            height: auto;
+            margin-left:3px;
+            padding: auto;
+        }
+
+        .buttonValentine:hover{
+            opacity: 0.7;
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="js/script.js"></script>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Anime.html" target=_self>Anime</a>
+        <a href="Commands.html" target=_self>Bot Commands</a>
+        <div class="subnav">
+            <button class="subnavButton"><i class="fa fa-caret-down"></i> COTE</button>
+            <div class="subnav-content">
+                <a href="COTE.html" target=_self>COTE My Tier List</a>
+                <a href="COTEtier.html" target=_self>COTE Tier List</a>
+            </div>
+        </div>
+        <a href="Connections.html" target=_self>Connections</a>
+        <a href="Courses.html" target=_self>Courses Rating</a>
+        <a href="Games.html" target=_self>Games</a>
+        <a href="index.html" target=_self>Home</a>
+        <a href="Music.html" target=_self>Music</a>
+        <a href="Valentine.html" target=_self>Valentine</a>
+        <a href="Vtuber.html" target=_self>Vtuber Stuff</a>
+    </div>
+
+    <span style="color: white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; sidebar</span>
+
+    <center>
+        <div id="responseYes" style="display:none;">
+            <p>LETS GOO</p>
+            <img class="imageBear" src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif">
+        </div>
+        <div id="responseNo">
+            <img class="imageBear" src="https://media1.tenor.com/m/al4a1pG1f8YAAAAC/jump-bear.gif">
+            <p id="text" style="font-size:32px;">Will you be my valentine🌹?</p>
+            <button class="buttonValentine" style="z-index: 2" id ="yes" onclick="responseValentine('yes')">Yes🙈</button>
+            <button class="buttonValentine" id="no" onclick="responseValentine('no')">No🙉</button>
+        </div>
+        <!-- https://stackoverflow.com/questions/22527378/how-to-put-a-lights-off-effect -->
+        <script>
+            var size = 20;
+            var index = 0;
+            var responses = [
+                "Are you sure?",
+                "Really sure😢",
+                "I'll be very sad☹️",
+                "Pookie please🥺",
+                "Don't do this to me🥺",
+                "I'm going to cry😭",
+                "You're breaking my heart💔😭",
+            ];
+
+            function responseValentine(response){
+                if (response == 'yes'){
+                    document.getElementById("responseYes").style.display = "block";
+                    document.getElementById("responseNo").style.display = "none";
+                }else{
+                    let b = document.getElementById("no");
+                    b.style.position = 'absolute';
+                    let a = document.getElementById("yes");
+                    a.style.position = 'relative';
+
+                    var i = Math.floor(Math.random()*500)+1;
+                    var j = Math.floor(Math.random()*500)+1;
+                    b.style.left = i+"px";
+                    b.style.top = j+"px";
+                    if (index < responses.length-1) index++;
+                    size += 5;
+                    b.innerHTML = responses[index];
+                    a.style.fontSize = size + 'px';
+                }
+            }
+        </script>
+    </center>
+</body>
+
+
+</html>
