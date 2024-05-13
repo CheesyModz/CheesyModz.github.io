@@ -1,0 +1,36 @@
+Hello there and thank you for downloading Pixel Keyboard Lite!
+
+
+In this pack, only .png files are included. No animations included.
+For animations, please consider purchasing Pixel Keyboard: (https://illugion.itch.io/pixel-keyboard)
+
+The files are named in the following order:
+
+pkl_"format"_"order"_"size"_"group"_"key"
+
+Here is the size explanation:
+
+0 - One		: 16x16 px;
+1 - OnePlus	: 24x16 px;
+2 - Two		: 32x16 px;
+3 - TwoPlus	: 40x16 px;
+4 - Three		: 48x16 px;
+5 - FourPlus	: 72x16 px;
+6 - Five		: 80x16 px;
+7 - FivePlus	: 88x16 px;
+8 - TwoTall	: 16x32 px;
+9 - EnterFull	: 32x32 px;
+
+(Each name represents a 16 px increment. One is 16, Two is 32. Whenever there is a "plus" in the name, that means it's the size + 8 px wide. Whenever there is a "tall" in the name, means the increment is on the height. The numbers are there just for ordering the files.)
+
+
+For layouts, I recommend using a 8 px wide by 16 px tall grid, so that you can align the keys the same way a real keyboard looks. For further information and examples on layouts, check the layouts file.
+
+I'm aware that some keys are unreadable and that's a limitation on the 16x16 size. (Pause Break and Scroll Lock for example). I tried to focus more on the silhouettes of those keys rather than the text itself. If you feel inclined, you can make your own labels and edit them in the clear keys.
+
+If there are still any questions, please let me know in the comments of the itch.io page! (https://illugion.itch.io/pixel-keyboard-lite)
+
+About other things, feel free to contact me on twitter (https://twitter.com/illugion).
+
+Hope you enjoy the sprites! 
+- Giulianno
