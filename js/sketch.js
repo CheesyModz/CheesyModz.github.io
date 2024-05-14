@@ -147,7 +147,7 @@ function preload(){
         loadAnimation('assets/Basic Demon/antlered rascal/AntleredRascal.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/clawed abomination/ClawedAbomination.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/crimson imp/CrimsonImp.png', { frameSize: [16, 16], frames: 4 }),
-        loadAnimation('assets/Basic Demon/depraved blackguard/DepravedBlackguard.png', { frameSize: [16, 16], frames: 4 }),
+        loadAnimation('assets/Basic Demon/Depraved Blackguard/DepravedBlackguard.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/fledgling demon/FledglingDemon.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/floating eye/FloatingEye.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/foul gouger/FoulGouger.png', { frameSize: [16, 16], frames: 4 }),
@@ -155,7 +155,7 @@ function preload(){
         loadAnimation('assets/Basic Demon/nefarious scamp/NefariousScamp.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/pit balor/PitBalor.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/pointed demonspawn/PointedDemonspawn.png', { frameSize: [16, 16], frames: 4 }),
-        loadAnimation('assets/Basic Demon/rascally demonling/RascallyDemonling.png', { frameSize: [16, 16], frames: 4 }),
+        loadAnimation('assets/Basic Demon/Rascally Demonling/RascallyDemonling.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/tainted scoundrel/TaintedScoundrel.png', { frameSize: [16, 16], frames: 4 }),
         loadAnimation('assets/Basic Demon/warp skull/WarpSkull.png', { frameSize: [16, 16], frames: 4 })
     ];
@@ -322,7 +322,7 @@ function setup(){
     // intro buttons
     playButton = createImg('assets/Menu Buttons/Large Buttons/Large Buttons/Play Button.png')
         .size(120, 50)
-        .position(440, 310)
+        .position(440, 360)
         .hide()
         .mousePressed(() => {
             if (tutorialShow){
@@ -340,7 +340,7 @@ function setup(){
         });
     shopButton = createImg('assets/Prinbles/Black-Icon/Cart.png')
         .size(50, 50)
-        .position(875, 20)
+        .position(875, 70)
         .hide()
         .mousePressed(() => {
             if (gameState == intro) leaveIntro();
@@ -348,7 +348,7 @@ function setup(){
         })
     controlsButton = createImg('assets/Menu Buttons/Large Buttons/Large Buttons/Controls Button.png')
         .size(120, 50)
-        .position(440, 370)
+        .position(440, 420)
         .hide()
         .mousePressed(() => {
             leaveIntro();
@@ -356,7 +356,7 @@ function setup(){
         });
     creditsButton = createImg('assets/Menu Buttons/Square Buttons/Square Buttons/Info Square Button.png')
         .size(50, 50)
-        .position(820, 20)
+        .position(820, 70)
         .hide()
         .mousePressed(() => {
             if (gameState == intro) leaveIntro();
@@ -366,7 +366,7 @@ function setup(){
 
     backButton = createImg('assets/Menu Buttons/Square Buttons/Square Buttons/Home Square Button.png')
         .size(50, 50)
-        .position(930, 20)
+        .position(930, 70)
         .hide()
         .mousePressed(() => {
             if (gameState == shop) leaveShop();
@@ -375,7 +375,7 @@ function setup(){
     newGameButton = createImg('assets/Menu Buttons/Large Buttons/Large Buttons/New Game Button.png')
         .hide()
         .size(120, 50)
-        .position(440, 370)
+        .position(440, 420)
         .mousePressed(() => {
             if (gameState == win) coins += randomCoins;
             newGame = true;
@@ -389,7 +389,7 @@ function setup(){
     // settings buttons
     settingsButton = createImg('assets/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png')
         .size(50, 50)
-        .position(930, 20)
+        .position(930, 70)
         .hide()
         .mousePressed(() => {
             gameState = setting;
@@ -405,7 +405,7 @@ function setup(){
         });
     closeButton = createImg('assets/Prinbles/Black-Icon/Cross.png')
         .size(25, 25)
-        .position(715, 185)
+        .position(715, 235)
         .hide()
         .mousePressed(() => {
             gameState = runGame;
@@ -416,7 +416,7 @@ function setup(){
         });
     homeButton = createImg('assets/Prinbles/Black-Icon/Home.png')
         .size(100, 100)
-        .position(275, 300)
+        .position(275, 350)
         .hide()
         .mousePressed(() => {
             restartGame();
@@ -426,7 +426,7 @@ function setup(){
         });
     musicOnButton = createImg('assets/Prinbles/Black-Icon/Music-On.png')
         .size(100, 100)
-        .position(395, 300)
+        .position(395, 350)
         .hide()
         .mousePressed(() => {
             backgroundMusic.setVolume(0.3);
@@ -442,7 +442,7 @@ function setup(){
 
     musicOffButton = createImg('assets/Prinbles/Black-Icon/Music-Off.png')
         .size(100, 100)
-        .position(515, 300)
+        .position(515, 350)
         .hide()
         .mousePressed(() => {
             backgroundMusic.setVolume(0);
@@ -458,7 +458,7 @@ function setup(){
 
     newGameButtonSquare = createImg('assets/Prinbles/Black-Icon/Play.png')
         .size(100, 100)
-        .position(635, 300)
+        .position(635, 350)
         .hide()
         .mousePressed(() => {
             leaveSettings();
@@ -487,7 +487,7 @@ function setup(){
     // social media icons
     gmail = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media4.png")
         .size(40,40)
-        .position(740, 625)
+        .position(740, height-25)
         .hide()
         .mouseOver(() => {
             socialText = "garyhuang325@gmail.com"
@@ -495,7 +495,7 @@ function setup(){
 
     linkedIn = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media5.png")
         .size(40,40)
-        .position(790, 625)
+        .position(790, height-25)
         .hide()
         .mouseOver(() => {
             socialText = "@Gary Huang";
@@ -503,7 +503,7 @@ function setup(){
     
     instagram = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media6.png")
         .size(40,40)
-        .position(840, 625)
+        .position(840, height-25)
         .hide()
         .mouseOver(() => {
             socialText = "@gary_huangg";
@@ -511,7 +511,7 @@ function setup(){
 
     github = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media24.png")
         .size(40,40)
-        .position(890, 625)
+        .position(890, height-25)
         .hide()
         .mouseOver(() => {
             socialText = "@CheesyModz";
@@ -519,7 +519,7 @@ function setup(){
 
     discord = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media25.png")
         .size(40,40)
-        .position(940, 625)
+        .position(940, height-25)
         .hide()
         .mouseOver(() => {
             socialText = "@itscheesemodz";
