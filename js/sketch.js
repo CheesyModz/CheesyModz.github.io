@@ -78,6 +78,7 @@ let gameState = enterScreen;
 
 // home screen menu 
 let playButton, shopButton, controlsButton, creditsButton, gmail, linkedIn, instagram, github, discord, socialText;
+let gmailImg, linkedInImg, instagramImg, githubImg, discordImg, playButtonImg, controlsButtonImg, creditsButtonImg, shopButtonImg, backButtonImg, newGameButtonImg, settingsButtonImg, closeButtonImg, homeButtonImg, musicOnButtonImg, musicOffButtonImg, newGameButtonSquareImg;
 
 let newGameButton, gura, p5logo;
 
@@ -189,6 +190,24 @@ function preload(){
         loadImage('assets/Pixel Keyboard Lite/PNG Sprites/1 Bit/pkl_lite_keys_0_one_letter_k.png'),
         loadImage('assets/Pixel Keyboard Lite/PNG Sprites/1 Bit/pkl_lite_keys_0_one_letter_l.png')
     ];
+
+    playButtonImg = loadImage("assets/Menu Buttons/Large Buttons/Large Buttons/Play Button.png");
+    controlsButtonImg = loadImage("assets/Menu Buttons/Large Buttons/Large Buttons/Controls Button.png");
+    creditsButtonImg = loadImage("assets/Menu Buttons/Square Buttons/Square Buttons/Info Square Button.png");
+    shopButtonImg = loadImage("assets/Prinbles/Black-Icon/Cart.png");
+    backButtonImg = loadImage("assets/Menu Buttons/Square Buttons/Square Buttons/Home Square Button.png");
+    gmailImg = loadImage("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media4.png")
+    linkedInImg = loadImage("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media5.png")
+    instagramImg = loadImage("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media6.png")
+    githubImg = loadImage("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media24.png")
+    discordImg = loadImage("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media25.png");
+    newGameButtonImg = loadImage("assets/Menu Buttons/Large Buttons/Large Buttons/New Game Button.png");
+    settingsButtonImg = loadImage("assets/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png");
+    closeButtonImg = loadImage("assets/Prinbles/Black-Icon/Cross.png");
+    homeButtonImg = loadImage("assets/Prinbles/Black-Icon/Home.png");
+    musicOnButtonImg = loadImage("assets/Prinbles/Black-Icon/Music-On.png");
+    musicOffButtonImg = loadImage("assets/Prinbles/Black-Icon/Music-Off.png");
+    newGameButtonSquareImg = loadImage("assets/Prinbles/Black-Icon/Play.png");
 
     // bgm
     backgroundMusic = loadSound("assets/Music/stellar echoes.mp3");
@@ -319,156 +338,6 @@ function setup(){
     enemies.autoDraw = false;
     boss.autoDraw = false;
 
-    // intro buttons
-    playButton = createImg('assets/Menu Buttons/Large Buttons/Large Buttons/Play Button.png')
-        .size(120, 50)
-        .position(440, 360)
-        .hide()
-        .mousePressed(() => {
-            if (tutorialShow){
-                gameState = tutorial;
-                tutorialShow = false;
-            }else gameState = runGame;
-            player.ani = `${currentCharacter}idle`;
-            opacity = 255;
-            leaveIntro();
-            shopButton.hide();
-            creditsButton.hide();
-            backButton.hide();
-            settingsButton.show();
-            if (petBuy) cat.visible = true;
-        });
-    shopButton = createImg('assets/Prinbles/Black-Icon/Cart.png')
-        .size(50, 50)
-        .position(875, 70)
-        .hide()
-        .mousePressed(() => {
-            if (gameState == intro) leaveIntro();
-            gameState = shop;
-        })
-    controlsButton = createImg('assets/Menu Buttons/Large Buttons/Large Buttons/Controls Button.png')
-        .size(120, 50)
-        .position(440, 420)
-        .hide()
-        .mousePressed(() => {
-            leaveIntro();
-            gameState = controls;
-        });
-    creditsButton = createImg('assets/Menu Buttons/Square Buttons/Square Buttons/Info Square Button.png')
-        .size(50, 50)
-        .position(820, 70)
-        .hide()
-        .mousePressed(() => {
-            if (gameState == intro) leaveIntro();
-            else if (gameState == shop) leaveShop();
-            gameState = credits;
-        })
-
-    backButton = createImg('assets/Menu Buttons/Square Buttons/Square Buttons/Home Square Button.png')
-        .size(50, 50)
-        .position(930, 70)
-        .hide()
-        .mousePressed(() => {
-            if (gameState == shop) leaveShop();
-            gameState = intro;
-        })
-    newGameButton = createImg('assets/Menu Buttons/Large Buttons/Large Buttons/New Game Button.png')
-        .hide()
-        .size(120, 50)
-        .position(440, 420)
-        .mousePressed(() => {
-            if (gameState == win) coins += randomCoins;
-            newGame = true;
-            restartGame();
-            gameState = runGame;
-            opacity = 255;
-            newGameButton.hide();
-            settingsButton.show();
-        });
-
-    // settings buttons
-    settingsButton = createImg('assets/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png')
-        .size(50, 50)
-        .position(930, 70)
-        .hide()
-        .mousePressed(() => {
-            gameState = setting;
-            tempBossSpeed = boss.speed;
-            tempCatSpeed = cat.speed;
-            boss.speed = 0;
-            cat.speed = 0;
-            closeButton.show();
-            homeButton.show();
-            musicOnButton.show();
-            musicOffButton.show();
-            newGameButtonSquare.show();
-        });
-    closeButton = createImg('assets/Prinbles/Black-Icon/Cross.png')
-        .size(25, 25)
-        .position(715, 235)
-        .hide()
-        .mousePressed(() => {
-            gameState = runGame;
-            leaveSettings();
-            boss.speed = tempBossSpeed;
-            cat.speed = tempCatSpeed;
-            if (player.health <= 0) gameState = gameOver;
-        });
-    homeButton = createImg('assets/Prinbles/Black-Icon/Home.png')
-        .size(100, 100)
-        .position(275, 350)
-        .hide()
-        .mousePressed(() => {
-            restartGame();
-            gameState = intro;
-            leaveSettings();
-            settingsButton.hide();
-        });
-    musicOnButton = createImg('assets/Prinbles/Black-Icon/Music-On.png')
-        .size(100, 100)
-        .position(395, 350)
-        .hide()
-        .mousePressed(() => {
-            backgroundMusic.setVolume(0.3);
-            collectPowerup.setVolume(1);
-            playerDeath.setVolume(1);
-            gameOverSound.setVolume(1);
-            purchasedSound.setVolume(1);
-            itemEquip.setVolume(1);
-            completedSound.setVolume(1);
-            bossDeath.setVolume(1);
-            playerHurt.setVolume(1);
-        });
-
-    musicOffButton = createImg('assets/Prinbles/Black-Icon/Music-Off.png')
-        .size(100, 100)
-        .position(515, 350)
-        .hide()
-        .mousePressed(() => {
-            backgroundMusic.setVolume(0);
-            collectPowerup.setVolume(0);
-            playerDeath.setVolume(0);
-            gameOverSound.setVolume(0);
-            purchasedSound.setVolume(0);
-            itemEquip.setVolume(0);
-            completedSound.setVolume(0);
-            bossDeath.setVolume(0);
-            playerHurt.setVolume(0);
-        });
-
-    newGameButtonSquare = createImg('assets/Prinbles/Black-Icon/Play.png')
-        .size(100, 100)
-        .position(635, 350)
-        .hide()
-        .mousePressed(() => {
-            leaveSettings();
-            newGame = true;
-            restartGame();
-            gameState = runGame;
-            opacity = 255;
-            settingsButton.show();
-        });
-
     // resize images
     coinImg.resize(20,20);
     heartImg.resize(25,25);
@@ -484,47 +353,25 @@ function setup(){
     light.resize(1000, 700);
     gura.resize(100, 100);
 
-    // social media icons
-    gmail = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media4.png")
-        .size(40,40)
-        .position(740, height-25)
-        .hide()
-        .mouseOver(() => {
-            socialText = "garyhuang325@gmail.com"
-        });
+    playButtonImg.resize(120, 50);
+    controlsButtonImg.resize(120, 50);
+    creditsButtonImg.resize(50, 50);
+    shopButtonImg.resize(50, 50);
+    backButtonImg.resize(50, 50);
+    gmailImg.resize(40, 40);
+    linkedInImg.resize(40, 40);
+    instagramImg.resize(40, 40);
+    githubImg.resize(40, 40);
+    discordImg.resize(40, 40);
 
-    linkedIn = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media5.png")
-        .size(40,40)
-        .position(790, height-25)
-        .hide()
-        .mouseOver(() => {
-            socialText = "@Gary Huang";
-        });
+    newGameButtonImg.resize(120, 50);
+    settingsButtonImg.resize(50, 50);
+    closeButtonImg.resize(25, 25);
+    homeButtonImg.resize(100, 100);
+    musicOnButtonImg.resize(100, 100);
+    musicOffButtonImg.resize(100, 100);
+    newGameButtonSquareImg.resize(100, 100);
     
-    instagram = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media6.png")
-        .size(40,40)
-        .position(840, height-25)
-        .hide()
-        .mouseOver(() => {
-            socialText = "@gary_huangg";
-        });
-
-    github = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media24.png")
-        .size(40,40)
-        .position(890, height-25)
-        .hide()
-        .mouseOver(() => {
-            socialText = "@CheesyModz";
-        });
-
-    discord = createImg("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media25.png")
-        .size(40,40)
-        .position(940, height-25)
-        .hide()
-        .mouseOver(() => {
-            socialText = "@itscheesemodz";
-        });
-
     startup.play();
 }
 
@@ -636,6 +483,47 @@ function enterScreen(){
     }
 }
 
+let enterIntro = true;
+
+/**
+ * Function to create intro buttons - controls social media
+ */
+function createIntroButtons(){
+    playButton = new Sprite(500, 335, 120, 50, 'kinematic');
+    playButton.img = playButtonImg;
+
+    controlsButton = new Sprite(500, 395, 120, 50, 'kinematic');
+    controlsButton.img = controlsButtonImg;
+
+    if (enterIntro){
+        creditsButton = new Sprite(855, 45, 50, 50, 'kinematic');
+        creditsButton.img = creditsButtonImg;
+
+        shopButton = new Sprite(905, 45, 50, 50, 'kinematic');
+        shopButton.img = shopButtonImg;
+
+        backButton = new Sprite(955, 45, 50, 50, 'kinematic');
+        backButton.img = backButtonImg;
+        enterIntro = false;
+    }
+
+    // socials
+    gmail = new Sprite(760, 645, 40, 40, 'kinematic');
+    gmail.img = gmailImg;
+
+    linkedIn = new Sprite(810, 645, 40, 40, 'kinematic');
+    linkedIn.img = linkedInImg;
+
+    instagram = new Sprite(860, 645, 40, 40, 'kinematic');
+    instagram.img = instagramImg;
+
+    github = new Sprite(910, 645, 40, 40, 'kinematic');
+    github.img = githubImg;
+
+    discord = new Sprite(960, 645, 40, 40, 'kinematic');
+    discord.img = discordImg;
+}
+
 /**
  * Intro screen
  */
@@ -644,17 +532,8 @@ function intro(){
 
     // upon entry do the following
     if (enter){
-        playButton.show();
-        shopButton.show();
-        controlsButton.show();
-        creditsButton.show();
-        backButton.show();
         enter = false;
-        gmail.show();
-        linkedIn.show();
-        instagram.show();
-        github.show();
-        discord.show();
+        createIntroButtons();
     }
 
     fill('white');
@@ -664,6 +543,47 @@ function intro(){
 
     textSize(20);
     text(socialText, 850, 600);
+
+    backButton.draw();
+    gmail.draw();
+    linkedIn.draw();
+    instagram.draw();
+    github.draw();
+    discord.draw();
+
+    if (playButton.mouse.pressed()){
+        if (tutorialShow){
+            gameState = tutorial;
+            tutorialShow = false;
+            enterIntro = true;
+        }else{
+            gameState = runGame;
+            settingsButton = new Sprite(955, 45, 50, 50, 'kinematic');
+            settingsButton.img = settingsButtonImg;
+        }
+        player.ani = `${currentCharacter}idle`;
+        opacity = 255;
+        leaveIntro();
+        creditsButton.remove();
+        shopButton.remove();
+        backButton.remove();
+        if (petBuy) cat.visible = true;
+    }else if (controlsButton.mouse.pressed()){
+        leaveIntro();
+        gameState = controls;
+    }else if (creditsButton.mouse.pressed()){
+        leaveIntro();
+        gameState = credits;
+    }else if (shopButton.mouse.pressed()){
+        leaveIntro();
+        gameState = shop;
+    }
+
+    if (gmail.mouse.hovers()) socialText = "garyhuang325@gmail.com";
+    else if (linkedIn.mouse.hovers()) socialText = "@Gary Huang";
+    else if (instagram.mouse.hovers()) socialText = "@gary_huangg";
+    if (github.mouse.hovers()) socialText = "@CheesyModz";
+    if (discord.mouse.hovers()) socialText = "@itscheesemodz";
 }
 
 /**
@@ -671,13 +591,13 @@ function intro(){
  */
 function leaveIntro(){
     enter = true;
-    playButton.hide();
-    controlsButton.hide();
-    gmail.hide();
-    linkedIn.hide();
-    instagram.hide();
-    github.hide();
-    discord.hide();
+    playButton.remove();
+    controlsButton.remove();
+    gmail.remove();
+    linkedIn.remove();
+    instagram.remove();
+    github.remove();
+    discord.remove();
 }
 
 /**
@@ -807,6 +727,15 @@ function shop(){
     if (currentCharacter != 'Pink_Monster') pinkButton.text = 'Equip';
     if (owletBuy && currentCharacter != 'Owlet_Monster') owletButton.text = 'Equip';
     if (dudeBuy && currentCharacter != 'Dude_Monster') dudeButton.text = 'Equip';
+
+    if (creditsButton.mouse.pressed()){
+        leaveShop();
+        gameState = credits;
+    }else if (backButton.mouse.pressed()){
+        leaveShop();
+        gameState = intro;
+    }
+
 }
 
 /**
@@ -835,6 +764,10 @@ function controls(){
         image(keysImgs[i], 420, 90*(i+1));
         text(keysInfo[i], 480, 30+90*(i+1));
     }
+
+    if (creditsButton.mouse.pressed()) gameState = credits;
+    else if (shopButton.mouse.pressed()) gameState = shop;
+    else if (backButton.mouse.pressed()) gameState = intro;
 }
 
 /**
@@ -858,6 +791,9 @@ function credits(){
     Background music by @Top-Flow \n \
     Sounds effects by @Pixabay @Universfield\n \
     Font by @Pinisiart", 500, 175);
+
+    if (shopButton.mouse.pressed()) gameState = shop;
+    else if (backButton.mouse.pressed()) gameState = intro;
 }
 
 
@@ -892,7 +828,6 @@ function tutorial(){
         fill('white');
         textSize(56);
         enter = false;
-        settingsButton.hide();
     }
 
     player.draw();
@@ -935,7 +870,8 @@ function tutorial(){
             player.x = 100;
             opacity = 255;
             enter = true;
-            settingsButton.show();
+            settingsButton = new Sprite(955, 45, 50, 50, 'kinematic');
+            settingsButton.img = settingsButtonImg;
         }
         count++;
         success.play();
@@ -943,6 +879,26 @@ function tutorial(){
 
     rocks.draw();
     rocks.update();
+}
+
+/**
+ * Function to create setting buttons
+ */
+function createSettingButtons(){
+    closeButton = new Sprite(727.5, 197.5, 25, 25, 'kinematic');
+    closeButton.img = closeButtonImg;
+
+    homeButton = new Sprite(325, 350, 100, 100, 'kinematic');
+    homeButton.img = homeButtonImg;
+
+    musicOnButton = new Sprite(445, 350, 100, 100, 'kinematic');
+    musicOnButton.img = musicOnButtonImg;
+
+    musicOffButton = new Sprite(565, 350, 100, 100, 'kinematic');
+    musicOffButton.img = musicOffButtonImg;
+
+    newGameButtonSquare = new Sprite(685, 350, 100, 100, 'kinematic');
+    newGameButtonSquare.img = newGameButtonSquareImg;
 }
 
 
@@ -1158,7 +1114,7 @@ function runGame(){
     // change screen if conditions are met
     if (enemies.amount == 0 && stage != 3){
         gameState = stageCompletion;
-        settingsButton.hide();
+        settingsButton.remove();
     }else if (boss.health <= 0){
         gameState = death;
         boss.speed = 0;
@@ -1177,6 +1133,15 @@ function runGame(){
         cat.changeAni('scared');
     }
     if (enemyHitCd != 0) enemyHitCd--;
+
+    if (settingsButton.mouse.pressed()){
+        gameState = setting;
+        tempBossSpeed = boss.speed;
+        tempCatSpeed = cat.speed;
+        boss.speed = 0;
+        cat.speed = 0;
+        createSettingButtons();
+    }
 
     allSprites.draw();
     allSprites.update();
@@ -1210,8 +1175,9 @@ function death(){
         if (boss.ani.frame == boss.ani.lastFrame){
             gameState = win;
             boss.ani.frameDelay = 4;
-            newGameButton.show();
-            settingsButton.hide();
+            newGameButton = new Sprite(500, 395, 120, 50, 'kinematic');
+            newGameButton.img = newGameButtonImg;
+            settingsButton.remove();
             bossDeath.play();
         }
     //player death
@@ -1226,8 +1192,9 @@ function death(){
         if (player.ani.frame == player.ani.lastFrame){
             gameState = gameOver;
             player.ani.frameDelay = 4;
-            newGameButton.show();
-            settingsButton.hide();
+            newGameButton = new Sprite(500, 395, 120, 50, 'kinematic');
+            newGameButton.img = newGameButtonImg;
+            settingsButton.remove();
             playerDeath.play();
         }
     }
@@ -1268,17 +1235,62 @@ function setting(){
     fill(255, 100);
     noStroke();
     rect(250, 175, 500, 350);
+
+    closeButton.draw();
+    homeButton.draw();
+    musicOnButton.draw();
+    musicOffButton.draw();
+    newGameButtonSquare.draw();
+
+    if (closeButton.mouse.pressed()){
+        gameState = runGame;
+        leaveSettings();
+        boss.speed = tempBossSpeed;
+        cat.speed = tempCatSpeed;
+        if (player.health <= 0) gameState = gameOver;
+    }else if (homeButton.mouse.pressed()){
+        restartGame();
+        gameState = intro;
+        leaveSettings();
+        settingsButton.remove();
+    }else if (musicOnButton.mouse.pressed()){
+        backgroundMusic.setVolume(0.3);
+        collectPowerup.setVolume(1);
+        playerDeath.setVolume(1);
+        gameOverSound.setVolume(1);
+        purchasedSound.setVolume(1);
+        itemEquip.setVolume(1);
+        completedSound.setVolume(1);
+        bossDeath.setVolume(1);
+        playerHurt.setVolume(1);
+    }else if (musicOffButton.mouse.pressed()){
+        backgroundMusic.setVolume(0);
+        collectPowerup.setVolume(0);
+        playerDeath.setVolume(0);
+        gameOverSound.setVolume(0);
+        purchasedSound.setVolume(0);
+        itemEquip.setVolume(0);
+        completedSound.setVolume(0);
+        bossDeath.setVolume(0);
+        playerHurt.setVolume(0);
+    }else if (newGameButtonSquare.mouse.pressed()){
+        leaveSettings();
+        newGame = true;
+        restartGame();
+        gameState = runGame;
+        opacity = 255;
+    }
 }
 
 /**
  * Hide buttons when leave settings
  */
 function leaveSettings(){
-    closeButton.hide();
-    homeButton.hide();
-    musicOnButton.hide();
-    musicOffButton.hide();
-    newGameButtonSquare.hide();
+    closeButton.remove();
+    homeButton.remove();
+    musicOnButton.remove();
+    musicOffButton.remove();
+    newGameButtonSquare.remove();
 }
 
 // powerup variables
@@ -1332,7 +1344,8 @@ function stageCompletion(){
         }
         player.y = 500;
         gameState = runGame; 
-        settingsButton.show();
+        settingsButton = new Sprite(955, 45, 50, 50, 'kinematic');
+        settingsButton.img = settingsButtonImg;
         rocks.removeAll();
     }
 }
@@ -1363,7 +1376,20 @@ function win(){
         coins += randomCoins;
         newGame = false;
         restartGame();
-        newGameButton.hide();
+        newGameButton.remove();
+    }
+
+    newGameButton.draw();
+
+    if (newGameButton.mouse.pressed()){
+        if (gameState == win) coins += randomCoins;
+        newGame = true;
+        restartGame();
+        gameState = runGame;
+        opacity = 255;
+        newGameButton.remove();
+        settingsButton = new Sprite(955, 45, 50, 50, 'kinematic');
+        settingsButton.img = settingsButtonImg;
     }
 }
 
@@ -1393,6 +1419,19 @@ function gameOver(){
         newGame = false;
         restartGame();
     }
+
+    newGameButton.draw();
+
+    if (newGameButton.mouse.pressed()){
+        if (gameState == win) coins += randomCoins;
+        newGame = true;
+        restartGame();
+        gameState = runGame;
+        opacity = 255;
+        newGameButton.remove();
+        settingsButton = new Sprite(955, 45, 50, 50, 'kinematic');
+        settingsButton.img = settingsButtonImg;
+    }
 }
 
 /**
@@ -1419,7 +1458,7 @@ function restartGame(){
 
     if (!newGame){
         gameState = intro;
-        newGameButton.hide();
+        newGameButton.remove();
     }
 }
 
