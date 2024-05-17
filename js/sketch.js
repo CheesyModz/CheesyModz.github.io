@@ -201,7 +201,7 @@ function preload(){
     instagramImg = loadImage("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media6.png")
     githubImg = loadImage("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media24.png")
     discordImg = loadImage("assets/Pixel Fantasy Icons Social Media/MV Icons Social Media/Individual Icons/social-media25.png");
-    newGameButtonImg = loadImage("assets/Menu Buttons/Large Buttons/Large Buttons/New Game Button.png");
+    newGameButtonImg = loadImage("assets/Menu Buttons/Large Buttons/Large Buttons/New game Button.png");
     settingsButtonImg = loadImage("assets/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png");
     closeButtonImg = loadImage("assets/Prinbles/Black-Icon/Cross.png");
     homeButtonImg = loadImage("assets/Prinbles/Black-Icon/Home.png");
