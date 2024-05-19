@@ -2,13 +2,13 @@ var videoFileNames = [
     "A Chan's IRL (Face Reveal)", "A Smole Suisei Singing", "Aloe's IRL (Face Reveal)", "Aqua and Mea's IRL (Face Reveal)  Kinda", 
     "Ayame's Finger Reveal", "Best Girl's IRL (Face Reveal)", "Botan's IRL (Face Reveal)", "Calliope's IRL (Face Reveal) Part 2", 
     "Calliope's IRL (Face Reveal)", "Choco's IRL (Face Reveal)  Legit Legit Version", "Choco's IRL (Face Reveal)  Legit Version", "Choco's IRL (Face Reveal)", 
-    "Choco's Top Tier ASMR 🎧", "Coco's IRL (Face Reveal)", "Fauna's IRL (Face Reveal)", "Fubuki's IRL (Face Reveal)", 
-    "Haachama's IRL (Face Reveal)", "Hololive Past Life Song Covers", "Hololive Past Vtuber Avatars", "Ina's IRL (Face Reveal)", 
+    "Chocos Top Tier ASMR 🎧", "Coco's IRL (Face Reveal)", "Fauna's IRL (Face Reveal)", "Finanas IRL (Face Reveal)", "Fubuki's IRL (Face Reveal)", 
+    "Haachama's IRL (Face Reveal)", "Hololive Past Life Song Covers", "Hololive Past Vtuber Avatars", "Inas IRL (Face Reveal)", 
     "IRL Amelia looking at Lewd Vtuber's stuff", "IRL Korone moving her eyebrows", "IRL Laplus Dancing", "IRL Laplus shows off her Oppai", 
     "IRL Laplus Simping", "IRL Marine Singing", "IRL Mio and Ars Cooking (Face Reveal)", "IRL Moona Dancing (Face Reveal)", 
     "IRL Noel Stretching", "IRL Towa Dancing (Face Reveal)", "IRL Watame Dancing", "IRYS FACE REVEAL", 
     "Korone's IRL (Face Reveal) Part 2", "Korone's IRL (Face Reveal)", "Kronii's IRL (Face Reveal)", "Lamy's IRL (Oppai Reveal)", "Laplus",
-    "Lui's IRL (Face Reveal)", "Lulu's IRL (Face Reveal)", "Luna's IRL (Face Reveal) Part 2", "Luna's IRL (Face Reveal)", 
+    "Lui's IRL (Face Reveal)", "Lulus IRL (Face Reveal)", "Luna's IRL (Face Reveal) Part 2", "Luna's IRL (Face Reveal)", 
     "Marine's IRL (Face Reveal)", "Matsuri....Messed Up", "Miko's IRL (Face Reveal) Part 2", "Miko's IRL (Face Reveal)", 
     "Miko's Top Tier Ecchi Roleplay (Onee-san Loli)", "Mio's Glowup (Face Reveal)", "Mio's IRL (Face Reveal)", "MOMOSUZU NENE FACE REVEAL",
     "Moona's IRL (Face Reveal)", "MURASAKI SHION AND MINATO AQUA CHEST REVEAL", "Nanashi Mumei's IRL (Face Reveal)", "NATSUIRO MATSURI FACE REVEAL",
@@ -16,41 +16,42 @@ var videoFileNames = [
     "Noel's IRL (Face Reveal)", "Okayu's IRL (Face Reveal)", "Pekora's IRL (Face Reveal)", "Pekora's IRL JK Ver.",
     "Plastic Love Matsuri IRL Ver.", "Polka's IRL (Face Reveal)", "Reine's IRL (Face Reveal)", "Roboco's IRL (Face Reveal)",
     "Rushia reveals her cat (Face Reveal)", "Rushia reveals her cat Part 2 (Face Reveal)", "Rushia's IRL (Face Reveal)  Video Edition", "Rushia's IRL (Face Reveal) Part 2",
-    "Sana's IRL (Face Reveal)", "Shion's IRL (Face Reveal)", "Shylily", "Some Pekora Boing Boing", "Subaru IRL",
+    "Selens IRL (Face Reveal)", "Sana's IRL (Face Reveal)", "Shion's IRL (Face Reveal)", "Shylily", "Some Pekora Boing Boing", "Subaru IRL",
     "Subaru's IRL (Face Reveal) Part 2", "Subaru's IRL (Face Reveal)", "Suisei's IRL (Face Reveal)", "THAT TIME I GOT REINCARNATED AS HIMEMORI LUNA",
-    "THAT TIME I GOT REINCARNATED AS HOUSHOU MARINE", "Tokino Sora godess", "Towa's Face Reveal", "Towa's IRL (Face Reveal) Part 2",
+    "THAT TIME I GOT REINCARNATED AS HOUSHOU MARINE", "tokino-sora-godess", "Towa's Face Reveal", "Towa's IRL (Face Reveal) Part 2",
     "Tribute 🦋❤️", "URUHA RUSHIA FACE REVEAL", "Watame's IRL (Face Reveal)", "YOZORA MEL FACE REVEAL",
     "Yozora Mel's Dance"
 ];
 
 var pictureFileName = [
-    "AkumaNihmune", "Amalee", "Artia", "Bao", "BotanAyameNeneMama", "Choco", "Choco 2", "Coco", "Fauna", "Finana Ryugu Face",
-    "Froot", "Froot 2", "IDK", "Korone", "Korone 2", "Korone 3", "Korone 4", 
+    "AkumaNihmune", "Amalee", "Artia", "Bae", "Bao", "Bao 1", "Bao 2", "Bao 3", "Bao 4",  
+    "BotanAyameNeneMama", "Buffpup", "Choco", "Choco 2", "Coco", "Elira", "Enna", "Enna 1", "Enna 2",
+    "Enna 3", "Fauna", "Finana Ryugu Face", "Froot", "Froot 2", "Gura", "IDK", "Korone", "Korone 2", "Korone 3",
     "Koyori", "Laplus", "Laplus 2", "Laplus 3", "Laplus 4", "Laplus 5", "Laplus 6", 
-    "Laplus 7", "Lofi", "Lui", "Lui 2", "Lui 3", "Luna", "Masturi", 
-    "Mel", "Mel 2", "MelRushia", "Miko", "Minami", "Nene", "Noel",
-    "Noel 2", "Rushia", "Rushia 2", "Rushia 3", "Rushia 4", "Rushia 5", "Rushia 6", 
-    "Rushia 7", "Rushia 8", "Saki", "Towa", "Towa 2", "Towa 3", "Towa 4","Towa 5", 
-    "Towa 6", "Towa 7", "Tricky", "Tricky 1", "veibae", "veibae 2", "veibae 3", "veibae 4", "Watame", "Yuzu"
+    "Laplus 7", "Laplus 8", "Laplus 9", "Lofi", "Luca", "Lui", "Lui 2", "Lui 3", "Luna", "Masturi", "Masturi 1", "Masturi 2", 
+    "Mel", "Mel 2", "MelRushia", "Miko", "Millie", "Millie 1", "Minami", "Mysta Rias", "Nene", "Nina", "Nina 1", "Noel",
+    "Noel 2", "Noel 3", "Noel 4", "Noel 5", "Noel 6", "Nyanners", "Nyanners 1", "Pomu", "Pomu 1", "Pomu 2", "Reimu",
+    "Rushia", "Rushia 2", "Rushia 3", "Rushia 4", "Rushia 5", "Rushia 6", "Rushia 7", "Rushia 8", "Saki", "Shoto",
+    "Towa", "Towa 2", "Towa 3", "Towa 4","Towa 5", "Towa 6", "Towa 7", "Tricky", "Tricky 1", "veibae", "veibae 2", "veibae 3", 
+    "veibae 4", "Vox", "Vox 1", "Watame", "Yuzu", "Yuzu1", "Yuzu2"
 ];
 
 var index = 0;
 
 function changeVideo(direction){
     if (direction == 'Back' && index != 0) index--;
-    else if (direction == 'Back') index = 84;
-    else if (direction == 'Next' && index != 84) index++;
+    else if (direction == 'Back') index = videoFileNames.length-1;
+    else if (direction == 'Next' && index != videoFileNames.length-1) index++;
     else if (direction == 'Next') index = 0;
 
     document.getElementById("videoFileName").innerHTML = `${videoFileNames[index]}`;
-    if ([12, 19, 36, 38, 42, 71, 73, 77, 79].includes(index)) document.getElementById("videoFile").setAttribute('src', `Vtuber Stuff/videos/${videoFileNames[index]}.mp4`); 
-    else document.getElementById("videoFile").setAttribute('src', `Vtuber Stuff/videos/${videoFileNames[index]}.mkv`);
+    document.getElementById("videoFile").setAttribute('src', `Vtuber Stuff/videos/${videoFileNames[index]}.mkv`);
 } 
 
 function changePicture(direction){
     if (direction == 'Back' && indexPicture != 0) indexPicture--;
-    else if (direction == 'Back') indexPicture = 59;
-    else if (direction == 'Next' && indexPicture != 59) indexPicture++;
+    else if (direction == 'Back') indexPicture = pictureFileName.length-1;
+    else if (direction == 'Next' && indexPicture != pictureFileName.length-1) indexPicture++;
     else if (direction == 'Next') indexPicture = 0;
     
     document.getElementById("pictureFileName").innerHTML = `${pictureFileName[indexPicture]}`;
