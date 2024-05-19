@@ -240,7 +240,7 @@ function preload(){
  */
 function setup(){
     textFont(font);
-    new Canvas(1000, 700);
+    createCanvas(1000, 700).position((windowWidth-width)/2);
     world.gravity.y = 5;
 
     // cat
